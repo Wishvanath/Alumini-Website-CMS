@@ -22,7 +22,14 @@ if (isset($_POST['ment_reg'])){
 	// 		echo "you have registered ";
 	// 		exit();
 	// 	}
-	$query = "INSERT INTO `aes_mentor` (`mentor_id`, `mentor_name`, `email_id`,`contact_no`, `mentor_pf`, `mentor_sp`, `available_hours`, `available_days`, `image`) VALUES (NULL, '$mentor_name','$email_id','$contact_no', '$mentor_pf', '$mentor_sp', '$available_hours', '$available_days', '')";
+					  $mn_query = "SELECT * FROM `aes_alumni` WHERE `aes_alumni`.`email_id` = '$email_id'";
+                      $mn_run = mysqli_query($con, $mn_query) or die("can not fetch the data from database".mysqli_error($con));
+                      if (mysqli_num_rows($mn_run)>0) {
+                        $mentor_det = mysqli_fetch_assoc($mn_run);
+                        $ment_image =  $mentor_det['image'];
+                      }
+	
+	$query = "INSERT INTO `aes_mentor` (`mentor_id`, `mentor_name`, `email_id`,`contact_no`, `mentor_pf`, `mentor_sp`, `available_hours`, `available_days`, `image`) VALUES (NULL, '$mentor_name','$email_id','$contact_no', '$mentor_pf', '$mentor_sp', '$available_hours', '$available_days', '$ment_image')";
 	$run = mysqli_query($con, $query) or die("can not insert the data into the database" .mysqli_error($con));
 	if ($run) {
 		echo '<script language="javascript">';

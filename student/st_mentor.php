@@ -19,18 +19,26 @@
               <h2>Mentor</h2>
             </div>
             <hr>
+            <!-- start of php code -->
+            <?php 
+              $ment_query = "SELECT * FROM `aes_mentor` ORDER BY `mentor_id`  ";
+              $ment_run = mysqli_query($con, $ment_query);
+              if (mysqli_num_rows($ment_run) > 0) {
+                while ($ment_det = mysqli_fetch_assoc($ment_run)) {  ?>
+                  
+             
              <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
                <div class="thumbnail">
                  <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
+                   <img src="../img/<?php echo $ment_det['image'] ?>" alt="Mentor Image">
                  </div>
                  <hr>
                  <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
+                   <h4>Specilization: <?php echo $ment_det['mentor_sp'] ?></h4>
+                   <h5>Contact No: <?php echo $ment_det['contact_no'] ?></h5>
+                   <h5>Email:<?php echo $ment_det['email_id'] ?></h5>
+                   <h5>Available Hours: <?php echo $ment_det['available_hours'] ?></h5>
+                   <h5>Available Days:<?php echo $ment_det['available_days'] ?></h5>
                  </div>
                  <hr>
                  <div class="men_btn_panel">
@@ -38,6 +46,14 @@
                  </div>
                </div>
              </div>
+             <?php     
+                }
+              }
+              else{
+                echo "data not found in the database";
+              }
+
+             ?>
              <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
                <div class="thumbnail">
                  <div class="image">
@@ -97,6 +113,9 @@
              </div>
            </div> <!-- end of row -->
             <hr>
+            
+
+       <!-- find mentor section  -->
            <div class="row find_mentor">
              <div class="page_head">
                  <h2>Find Mentor</h2>
