@@ -1,0 +1,629 @@
+
+body{
+	line-height: 1.5;
+	 font-family: 'Montserrat', sans-serif;
+	 font-size: 12px;
+	 color: #757575;
+	 min-width: 100%;
+	 padding-top: 0;
+	 overflow-x: hidden;
+	 position: relative;
+	 
+}
+
+
+
+.main_wrapper {
+   background-color: #558cbd;
+  -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);;
+   box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);; 
+   
+}
+hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.main_wrapper .page_header .site_image img{
+  width: 70%;
+  margin-top: 20px;
+}
+.main_wrapper .page_header .al_logo img{
+  width: 90%;
+  margin-top: 10px;
+}
+.main_wrapper .page_header .site_title h3{
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 10px;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 50px;
+}
+/*.main_wrapper .page_header .al_pf_image{
+  text-align: center;
+}
+*/
+
+.navbar{
+  background-color:rgba(127, 9, 9,0.7);
+  color: white;
+  border: none;
+
+}
+.navbar .navbar-nav >li >a{
+  color: white;
+  
+}
+.navbar .navbar-nav >li:hover{
+  background-color:rgba(127, 9, 9,1);
+
+}
+.navbar-default .navbar-nav > li > a:focus{
+    color: white;
+    background-color: transparent;
+}
+.navbar .navbar-right >li >a{
+  margin-right: 15px;
+}
+.navbar .navbar-nav >li >a:hover{
+  color: white;
+  opacity: 0.7;
+}
+.navbar .navbar-header .navbar-brand{
+  color:white;
+}
+.navbar .navbar-header .navbar-brand:hover{
+  color:#F8A427;
+}
+
+  
+/*for background video*/
+#myVideo {
+    /*position: fixed;*/
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: -20px;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position:relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 40%;
+    padding: 20px;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    margin-top: -280px;
+    margin-bottom: 30px;
+
+
+}
+
+.content h4{
+  margin-top: 20px;
+  line-height: 26px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color:rgba(127, 9, 9,0.5);
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background-color:rgba(127, 9, 9,1);
+    color: white;
+}
+
+
+.main_wrapper .al_footer{
+   background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+    box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+  
+}
+
+.main_wrapper .thumbnail img{
+  width: 100%;
+}
+.main_wrapper .thumbnail{
+  margin-top: 30px;
+  border:none;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 15px;
+  margin-bottom: 60px;
+}
+.main_wrapper .thumbnail .descp{
+  margin-top: 25px;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+.main_wrapper .al_as_thumb{
+  
+  background-color:rgba(23, 83, 135,0.8);
+}
+
+.al_mentor .aljob_image img{
+  width: 100%;
+  margin-top: 50px;
+}
+.al_mentor .search_panel {
+  margin-top: 100px;
+}
+.al_mentor .job_sea_button{
+  margin-top: -47px;
+  width: 120px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: #558CBD;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 30px;
+  float: right;
+}
+.al_mentor .search_panel #search_tag{
+  height: 47px;
+  width: 450px;
+}
+
+.main_wrapper .thumbnail .thumb_button{
+  width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color:rgba(127, 9, 9,0.5);
+    color: #fff;
+    cursor: pointer;
+}
+.main_wrapper .thumbnail .job_button{
+    width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color:rgba(127, 9, 9,1);
+    color: #fff;
+    cursor: pointer;
+}
+.main_wrapper .thumbnail .job_button:hover{
+    width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #558CBD;
+    color: #fff;
+    cursor: pointer;
+}
+.main_wrapper .thumbnail .thumb_button:hover{
+  background-color:rgba(127, 9, 9,1);
+  color: white;
+}
+.main_wrapper .al_assoc .as_heading{
+  text-align: center;
+}
+.main_wrapper .al_assoc .as_heading h3{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/*for alumni mentor*/
+.main_wrapper .al_mentor{
+  
+  background-color: white;
+  margin-top: -15px;
+  color: black;
+}
+.al_mentor .mentor_image img{
+  width: 70%;
+  margin-top: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.al_mentor .mentor_button{
+  width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color:rgba(127, 9, 9,1);
+    color: #fff;
+    cursor: pointer;
+   margin-left: 218px;
+
+}
+.al_mentor .job_sea_button:hover{
+   background-color:rgba(127, 9, 9,1);
+}
+.al_mentor .mentor_button:hover{
+    background-color: #558CBD;
+
+}
+.al_mentor .ser_result img{
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  
+}
+.al_mentor .page_head{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.al_mentor .page_head h2{
+  width: 200px;
+  padding: 7px;
+  background-color: #558CBD;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+.al_mentor .page_head h2:hover{
+  background-color:rgba(127, 9, 9,1);
+}
+.al_mentor .ser_result{
+  max-height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 700px;
+  background-color: #fcfcfc;
+  border: 1px solid #EEEEEE;
+  padding: 4px;
+  border-radius: 3px;
+  width: 550px;
+}
+.al_mentor .men_save{
+    width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #558CBD;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 20px
+}
+.al_mentor .men_save:hover{
+  background-color:rgba(127, 9, 9,1);
+}
+.al_mentor .men_reg{
+  margin-top: 50px;
+}
+
+/*for adjunct professor*/
+.al_mentor .adjn_image img{
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  
+}
+.al_mentor .post_panel .post_job{
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #558CBD;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 20px 
+}
+
+.al_mentor .post_panel{
+  /*text-align: center;*/
+  padding: 20px;
+
+}
+.al_mentor .post_panel .post_job:hover{
+  background-color:rgba(127, 9, 9,1);
+}
+.al_mentor .btn_panel .sav_btn_job{
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color:rgba(127, 9, 9,1);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 20px 
+}
+.al_mentor .btn_panel .sav_btn_job:hover{
+    background-color: #558CBD;
+}
+.al_mentor{
+    margin-top: -5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+    box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+    color: black;
+    -box-shadow
+}
+.al_mentor .pf_image img{
+  width: 25%;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.al_mentor .pf_image{
+  text-align: center;
+}
+.main_wrapper .al_assoc .as_content {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    line-height: 25px;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.main_wrapper .al_assoc {
+    background-color: rgba(23, 83, 135,0.8);
+    margin-top: -30px;
+    padding: 20px;
+    color: white;
+}
+
+/* for student mentor selection*/
+.al_mentor .ment_image{
+  margin-top: 20px;
+}
+.al_mentor .ment_image img{
+  width: 100%;
+}
+.al_mentor .ment_select{
+  width: 100px;
+    font-size: 13px;
+    padding: 8px;
+    border: none;
+    background-color:rgba(127, 9, 9,1);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 5px 
+}
+.al_mentor .ment_select:hover{
+  background-color: #558CBD;
+}
+.al_mentor .men_btn_panel{
+  text-align: center;
+}
+.find_mentor .search_job:hover{
+   background-color: #558CBD;
+}
+.find_mentor .search_job{
+  width: 140px;
+    font-size: 13px;
+    padding: 8px;
+    border: none;
+    background-color:rgba(127, 9, 9,1);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 0px 
+}
+.al_mentor .mes_part{
+  background-color: #558cbd;
+  -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);;
+   box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+   padding: 20px;
+   height: 500px;
+   margin-top: -50px;
+   color: white;
+   line-height: 25px;
+   font-size: 15px;
+   letter-spacing: 1.5px; 
+}
+.al_mentor .mes_part p{
+  margin-top: 20px;
+}
+
+/*============================================================================*/
+
+/*for media query*/
+
+/* for extra small device */
+@media(max-width: 767px){
+  body{
+    background-color: black;
+  }
+  .main_wrapper .page_header .site_image img{
+    width: 100%;
+  
+  }
+  .main_wrapper .page_header .site_image{
+    text-align: center;
+  }
+  .main_wrapper .page_header .al_logo img{
+  width: 100%;
+  margin-top: 20px;
+  }
+  .main_wrapper .page_header .al_logo{
+    text-align: center;
+  }
+  .main_wrapper .page_header .site_title h3{
+    font-size: 15px;
+    margin-top: 40px;
+  } 
+  .content h4{
+    margin-top: 8px;
+    font-size: 10px;
+    line-height: 20px;
+    
+  } 
+  .al_mentor .mentor_button{
+     margin-left: 200px;
+
+  }
+
+  .al_mentor .search_panel #search_tag{
+  height: 47px;
+  width: 200px;
+  }
+  .al_mentor .ser_result{
+  max-height: 450px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 700px;
+  background-color: #fcfcfc;
+  border: 1px solid #EEEEEE;
+  padding: 4px;
+  border-radius: 3px;
+  width: 300px;
+  }
+  .al_mentor .mentor_button{
+   margin-left: 100px;
+  }
+  .al_mentor .mes_part{
+    margin-top: 0px;
+    height: 500px;
+  }
+}
+
+/* for small device*/
+@media (min-width: 768px) and (max-width: 991px){
+  body{
+    background-color: red;
+  }
+  .main_wrapper .page_header .site_title h3{
+    font-size: 17px;
+  }
+  .main_wrapper .page_header .site_button{
+  text-align: center;
+  margin-top: 40px;
+  }
+  .main_wrapper .page_header .site_image img{
+  width: 90%;
+  }
+  .navbar .navbar-nav > li > a{
+    font-size: 10px;
+  }
+  .content h4{
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 20px;
+    
+  }
+  .content{
+    margin-top: -190px;
+  }
+  .al_mentor .mentor_button{
+     margin-left: 150px;
+
+  }
+  .al_mentor .mentor_message h4{
+    font-size: 12px;
+    line-height: 25px;
+    /*margin-top: 40px;*/
+  }
+  .al_mentor .search_panel #search_tag{
+  height: 47px;
+  width: 230px;
+  }
+  .al_mentor .ser_result{
+  max-height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 700px;
+  background-color: #fcfcfc;
+  border: 1px solid #EEEEEE;
+  padding: 4px;
+  border-radius: 3px;
+  width: 340px;
+  }
+  .al_mentor .mentor_button{
+    margin-left: 110px;
+  }
+  .al_mentor .mes_part{
+    margin-top: 0px;
+  }
+}
+
+/* for medium device*/
+@media (min-width: 992px) and (max-width: 1199px){
+  body{
+    background-color: yellow;
+  }
+  .main_wrapper .page_header .site_title h3{
+    font-size: 23px;
+  }
+  .main_wrapper .page_header .site_image img{
+    width: 70%;
+  }
+  .affix {
+      top: 0;
+      width: 85%;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+  }
+  .content h4{
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+
+  }
+  .content{
+    margin-top: -240px;
+  }
+  .al_mentor .search_panel #search_tag{
+  height: 47px;
+  width: 350px;
+  }
+  .al_mentor .ser_result{
+  max-height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 700px;
+  background-color: #fcfcfc;
+  border: 1px solid #EEEEEE;
+  padding: 4px;
+  border-radius: 3px;
+  width: 450px;
+  }
+  .al_mentor .mentor_button{
+    margin-left: 170px;
+  }
+  .al_mentor .mes_part{
+    margin-top: 0px;
+  }
+}
+
+/* for large device */
+@media (min-width: 1200px){
+  body{
+   /* background-color: #1E7E0B;*/
+  }
+}

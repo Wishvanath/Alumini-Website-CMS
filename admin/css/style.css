@@ -1,0 +1,416 @@
+
+body{
+	line-height: 1.5;
+	 font-family: 'Montserrat', sans-serif;
+	 font-size: 12px;
+	 color: #757575;
+	 min-width: 100%;
+	 padding-top: 0;
+	 overflow-x: hidden;
+	 position: relative;
+	 background-color:#337ab7; 
+}
+/* for admin header part */
+.main_wrapper {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
+}
+.main_wrapper .student_list{
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 900px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    color: #10A2C1;
+    border-radius: 5px;
+    
+
+}
+.main_wrapper .alumni_list{
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 900px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 4px;
+    color: #10A2C1;
+    border-radius: 5px;
+   
+}
+.main_wrapper .alumni_data .alumni_upd{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    color: #10A2C1;
+}
+.main_wrapper .student_data .student_upd{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    color: #10A2C1;
+}
+.main_wrapper .header_logo img{
+  width: 65%;
+  border-radius: 5px;
+  margin-top: 10px;
+  /*box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.8);*/
+
+}
+.main_wrapper .od_news .published_date{
+  color: #F8A427;
+  
+}
+.main_wrapper .od_events .published_date{
+  color: #F8A427;
+  
+}
+.main_wrapper .header_title h1{
+  font-size: 35px;
+  color: #7f0909;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: bold;
+  padding: 10px;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 35px;
+}
+.main_wrapper .header_logout{
+   margin-top: 50px;
+  text-align: center;
+
+  
+}
+.main_wrapper .header_logout a{
+  float: right;
+   margin-right: 20px;
+}
+.old_message .published_date{
+  color:#ec971f;
+
+}
+.bhoechie-tab-menu .list-group > a.active::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -13px;
+    border-left: 0;
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 10px solid #7f0909;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #7f0909;
+    border-color: #7f0909;
+}
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: #7f0909;
+    text-decoration: none;
+    /*background-color: #f8a427;*/
+}
+a.list-group-item, button.list-group-item {
+    color: #7f0909;
+    font-size: 14px;
+}
+.list-group .list-group-item h4{
+  color: #f8a427;
+  font-size: 15px;
+}
+.head_title{
+    float: left;
+    width: 99%;
+    margin: 0 0 5px 0;
+    padding: 0px;
+    color: #073e6b;
+    border-bottom: 1px solid #ccc;
+}
+.bhoechie-tab-content .head_title {
+    margin: 7px 0 22px 0;
+    padding: 4px 0;
+}
+/*for old message section*/
+.main_wrapper .new_message h4{
+  color: #337ab7;
+}
+.main_wrapper .od_msg h4{
+  color: #337ab7;
+}
+.main_wrapper .latest_news h4{
+  color: #337ab7;
+}
+.main_wrapper #nec_scroll {
+    max-height: 390px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 700px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 4px;
+    color: #10A2C1;
+    border-radius: 5px;
+    padding: 10px;
+}
+.main_wrapper .od_news h4{
+  color: #337ab7;
+}
+.main_wrapper .latest_event h4{
+  color: #337ab7;
+}
+.main_wrapper .od_events h4{
+  color: #337ab7;
+}
+.main_wrapper .latest_jobs h4{
+  color: #337ab7;
+}
+
+.admin_pf .al_image img{
+  width: 60%;
+  border: 3px solid #7f0909;
+  margin-top: 15px;
+}
+
+.admin_pf .al_image .ch_pic{
+  
+  font-size: 15px;
+  color: #337ab7;
+}
+.admin_pf .al_image{
+  text-align: center;
+
+}
+.admin_pf .btn_list a{
+  margin-top: 20px;
+}
+.admin_pf .ad_details h4{
+  color: #337ab7;
+}
+/*for admin dashboard login*/
+.admin_dashboard .ad_main{
+  margin-top: 100px;
+}
+.admin_dashboard {
+  margin: 0;
+  padding: 0;
+  background: url("../img/ad_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 1350px;
+  height: 660px;
+  font-family: sans-serif;
+
+}
+.admin_dashboard .ad_main .panel{
+  border:0px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  padding-top: 70px;
+  position: relative;
+  transition: 1s;
+
+}
+.admin_dashboard .ad_main .label{
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 40px;
+  width: 130px;
+  line-height: 40px;
+  color: #fff;
+  transform: rotate(-20deg);
+  background-color:rgba(224, 149, 19,1);
+
+
+}
+.admin_dashboard .ad_main .label:hover{
+  /*background-color:rgba(224, 149, 19,0.7);*/
+  background-color: #7f0909;
+}
+.admin_dashboard .ad_main .panel:hover{
+  background-color: rgba(0,0,0,0.7);
+}
+.admin_dashboard .ad_main .panel h4{
+  margin: 0;
+  padding: 0;
+  color: #B39A0F;
+}
+.admin_dashboard .ad_main .fa-facebook{
+  color: #4068CE;
+  font-size: 20px;
+}
+.admin_dashboard .ad_main .fa-twitter{
+  color: #0EACBF;
+  font-size: 20px;
+}
+.admin_dashboard .ad_main .fa-google-plus{
+  color: #AC0606;
+  font-size: 20px;
+}
+
+.admin_dashboard .ad_main span{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  margin-left: 10px;
+  -webkit-box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+  box-shadow: -10px 10px 10px rgba(0,0,0,0.5);
+}
+.admin_dashboard .ad_main .lock{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  line-height: 110px;
+  top: -50px;
+  text-align: center;
+  background: linear-gradient(#0B4B65,#2594C7);
+  background: -webkit-linear-gradient(#0B4B65,#2594C7);
+  background: -moz-linear-gradient(#0B4B65,#2594C7);
+  border: 3px outset #EBD911;
+  left: 37%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+
+}
+
+/* end of admin dashboard login page*/
+
+
+/*============================================================================*/
+
+/*for media query*/
+
+/* for extra small device */
+@media(max-width: 767px){
+  body{
+    background-color: black;
+  }
+  .student_list .table{
+    font-size: 7px;
+  }
+  .alumni_list .table{
+    font-size: 7px;
+  }
+  .faculty_list .table{
+    font-size: 7px;
+  }
+  .adjunct_pf_list .table{
+    font-size: 9px;
+  }
+  .payment_det_list .table{
+    font-size: 8px;
+  }
+  .main_wrapper .header_logo img {
+    width: 18%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 250px;
+    
+  }
+  .admin_pf .al_image img{
+  width: 40%;
+  
+  }
+  .admin_pf .al_image .ch_pic{
+  margin-left: 100px;
+
+  }
+  .main_wrapper .header_title h1{
+    font-size: 25px;
+  }
+
+}
+
+
+
+/* for small device*/
+@media (min-width: 768px) and (max-width: 991px){
+  body{
+    background-color: red;
+  }
+  .student_list .table{
+    font-size: 8px;
+  }
+  .alumni_list .table{
+    font-size: 8px;
+  }
+  .faculty_list .table{
+    font-size: 7px;
+  }
+  .adjunct_pf_list .table{
+    font-size: 10px;
+  }
+  .payment_det_list .table{
+    font-size: 10px;
+  }
+  .main_wrapper .header_logo img {
+    width: 20%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 260px;
+    
+  }
+  .admin_pf .al_image img{
+  width: 40%;
+  
+  }
+  .admin_pf .al_image .ch_pic{
+  margin-left: 150px;
+
+  }
+  .main_wrapper .header_title h1{
+    font-size: 25px;
+  }
+}
+
+/* for medium device*/
+@media (min-width: 992px) and (max-width: 1199px){
+  body{
+    background-color: yellow;
+  }
+  .student_list .table{
+    font-size: 10px;
+  }
+  .alumni_list .table{
+    font-size: 10px;
+  }
+  .faculty_list .table{
+    font-size: 10px;
+  }
+  .main_wrapper .header_title h1{
+    font-size: 28px;
+  }
+  .admin_pf .al_image img{
+  width: 70%;
+  
+  }
+}
+
+/* for large device */
+@media (min-width: 1200px){
+  body{
+    background-color: #31ADC0;
+  }
+}

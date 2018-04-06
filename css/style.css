@@ -1,0 +1,993 @@
+
+body{
+	line-height: 1.5;
+	 font-family: 'Montserrat', sans-serif;
+	 font-size: 12px;
+	 color: #757575;
+	 min-width: 100%;
+	 padding-top: 0;
+	 overflow-x: hidden;
+	 position: relative;
+	 background-color:#EEEEEE; 
+}
+.header_logo .logo {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.header_logo .logo img{
+    box-shadow: 2px 11px 16px rgba(0, 0, 0, 0.8);
+
+}
+.logo {url();
+    position: absolute;
+    display: inline-block;
+    width: 224px;
+    z-index: 10;
+}
+
+.top-nav{
+  background-color: #1a265c;
+  height: 37px;
+}
+.top-nav .top-left{
+  text-align: left;
+}
+.list-inline{
+  padding-left: 0px;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li{
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+ol, ul {
+    list-style: none;
+}
+.top-nav ul li a {
+    color: #d4d6e8;
+    display: block;
+    line-height: 3;
+}
+
+.top-nav .top-right {
+    text-align: right;
+}
+.search-box{
+  height: 25px;
+  background-color: transparent;
+  border-style: none;
+
+}
+
+/* for the navbar section*/
+.navbar-section{
+  margin-top: -18px;
+}
+
+.navbar .navbar-brand{
+  margin-top: -15px;
+  color: white;
+}
+.navbar-default .navbar-nav>li>a {
+   font-size: 14px;
+   margin-top: -17px;
+   color: #175386;
+   line-height: 30px;
+}
+
+.navbar-default {
+    background-color:white;
+    border-color:#eee;
+    margin-top: 0px;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color:rgba(26, 38, 92,1);
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+    color: #ddd;
+    background-color:rgba(26, 38, 92,1);
+}
+
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: black;
+   
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: white;
+    white-space: nowrap;
+}
+.dropdown-menu .divider {
+
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0.3;
+
+}
+.dropdown-menu>li>a:hover {
+  background-color: #1a265c;
+  color: white;
+  opacity: 0.6;
+}
+
+/* for the slider section*/
+.slider-section{
+  margin-top: -20px;
+}
+.slider-section .carousel-caption h2{
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-size: 45px;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 5px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.slider-section .carousel-inner img{
+  width: 100%;
+}
+
+.carousel-caption .text-bold {
+    
+    font-weight: bolder;
+}
+
+/*for chairman desk*/
+.chairman_desk{
+  margin-top: 30px;
+}
+.chairman_desk .chairman_image img{
+  width: 100%;
+  margin-top: 80px;
+}
+.chairman_desk .chairman_message p{
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  padding: 10px;
+  color: black;
+
+}
+.chairman_desk .chairman_message h3{
+  text-align: center;
+  text-transform: uppercase;
+  color:#337ab7;
+  font-weight: bold;
+
+}
+.chairman_desk .chairman_message i{
+  font-size: 20px;
+  color:#ee8b21;
+
+}  
+.chairman_desk .chairman_message #right_arr{
+  float: right;
+  margin-top: -40px;
+ }
+ .chairman_desk .chairman_message #left_arr{
+  float: left;
+  margin-left: -10px;
+  margin-top: -10px;
+ }
+ /*for news icon*/
+ 
+ .news_event .news_icon i{
+  color: #ee8b21;
+ }
+ .news_event .job_icon i{
+  color: #29864d;
+ }
+ .news_event .calender_icon i{
+  color: #4c6a8d;
+  /*font-size: 70px;*/
+ }
+ /* for the news and event descp*/
+ #nec_scroll{
+     max-height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 700px;
+    background-color:#fcfcfc;
+    border:1px solid #EEEEEE;
+    padding: 4px;
+    border-radius: 3px;
+
+}
+.event_descp h4{
+  color: #116A93;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.event_descp p{
+  color:#031015;
+  font-size: 12px;
+}
+.news_descp .col-xs-8 h4{
+  color: #18A6DA;
+  font-size: 15px;
+  text-transform: uppercase;
+
+}
+.news_descp .col-xs-8 p{
+  color:#031015;
+  font-size: 12px;
+}
+.job_descp h4{
+  color: #C89D0A;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.job_descp p{
+  color:#031015;
+  font-size: 12px;
+}
+.news_event{
+  margin-top: 30px;
+  padding: 60px;
+  background-color: #fcfcfc;
+}
+.news_event img{
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+
+}
+.news_event .news_icon .big-text{
+ font-size: 20px;
+color: #116A93;
+font-weight: bold;
+}
+.news_event .news_icon{
+ padding: 5px;
+  text-align: center;
+
+}
+.news_event .news_icon i{
+  font-size: 30px;
+}
+.news_event .job_image img{
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.news_event .job_descp .apply{
+  float: right;
+  margin-right: 15px;
+}
+.news_event .event_cal .event_date_place{
+  font-size: 10px;
+  font-weight: bold;
+  color: #ec862c;
+  margin-top: -5px;
+}
+.news_event .event_cal .event_image img{
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.alumni_story{
+ width: 100%;
+ height: auto;
+ background-color: white;
+ margin-top: 1px;
+ margin-bottom: 30px;
+}
+.alumni_story .col-md-4 img{
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 100px;
+  padding: 4px;
+  border: 2px solid #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.alumni_story .story_wrapper{
+  padding: 50px 0;
+  display: block;
+  float: left;
+}
+.alumni_story .story_wrapper h4 {
+    font-size: 25px;
+    color: #2a808a;
+}
+.heading-light, .text-light {
+    font-family: "Montserrat-Light";
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+.alumni_story .story_wrapper h1 {
+    font-size: 42px;
+    color: #116A93;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+.alumni_story .text-light {
+    line-height: 1.5;
+    font-size: 20px;
+    width: 85%;
+}
+.alumni_story .story_wrapper .see_strory_btn a {
+    border: 3px solid #f7ca18;
+    padding: 17px 41px;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #2d2d2d;
+    display: block;
+    transition: all 0.3s ease-in-out 0s;
+    width: 300px;
+    text-decoration: none;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.alumni_story .story_wrapper .see_strory_btn a:hover {
+  background-color: #f7ca18;
+  color: #fff;
+}
+
+/*for alumni dashboard */
+.alumni_dash{
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 40px;
+ 
+}
+
+.alumni_dash .alumni_title{
+  text-align: center;
+  font-size: 30px;
+  color: #116A93;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.alumni_dash .col-md-3 i{
+  font-size: 30px;
+  color:#F49C11;
+}
+.alumni_dash .col-md-3 p{
+  font-size: 18px;
+  color: #052f3a;
+  font-family: "Montserrat-Light";
+
+}
+.alumni_dash .col-md-3 h3{
+  color: #229bbb;
+}
+.admin_dash{
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 40px;
+ 
+}
+
+/*for foooter section*/
+.footer{
+  height: 100%;
+  background-color: #0a213b;
+  color: white;
+  padding: 30px;
+  font-size: 15px;
+  line-height: 25px;
+  
+}
+.footer a{
+  margin-left: 5px;
+  color: #F49C11;
+  font-size: 14px;
+
+}
+.footer a:hover{
+  color: white;
+  text-decoration: none;
+  
+}
+.footer i{
+  margin-left: 10px;
+}
+.footer h4{
+  text-align: left;
+  font-size: 18px;
+}
+.footer .col-md-3 .col-xs-3 img{
+  width: 100%;
+  margin-top: 20px;
+}
+
+/*alumni login window*/
+.alumni_login .alumni_window{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border:1px solid #ccc;
+  background-color:white;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #054B73;
+ 
+}
+.alumni_login{
+  background-color:#ccefe9;
+  margin-top: -20px;
+  
+  
+}
+.alumni_window h3{
+  text-align: center;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #DBB40B;
+}
+/* for alumni registration window*/
+.alumni_reg .alumni_reg_window{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border:1px solid #ccc;
+  background-color:white;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #054B73;
+}
+.alumni_reg .alumni_reg_window h3{
+  text-align: center;
+  font-size: 23px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #40CBF3; 
+
+}  
+.alumni_reg{
+  background-color:#ccefe9;
+  margin-top: -20px; 
+}
+.alumni_reg .alumni_reg_window .submit_btn{
+  text-align: center;
+}
+.submit_btn #btn_submit{
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+}
+
+/*for the about us page*/
+.university_moto .text-header h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0a213b;
+  margin-bottom: 30px;
+}
+.university_moto {
+  margin-top: 20px;
+}
+
+.university_moto .about_img img {
+  margin-top: 40px;
+  width: 80%;
+  /*border-radius: 2px;
+  padding: 2px;
+  box-shadow: 2px 11px 16px rgba(0, 0, 0, 0.8);*/
+}
+.university_moto .about_des p{
+  font-size: 15px;
+  padding: 5px;
+  letter-spacing: 2px;
+  color: #0B4F68;
+
+}
+.university_moto .about_des h4{
+  color: #7f0909;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+/* for programme and services*/
+.pgm_ser {
+  margin-top: 30px;
+  background-color: white;
+  padding: 30px;
+}
+.pgm_ser h4{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #7f0909;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+}
+
+.pgm_ser .job_offer img{
+  width: 100%;
+  border-radius: 5px;
+}
+.pgm_ser .event_desc img{
+  width: 100%;
+  border-radius: 5px;
+}
+.pgm_ser .fund img{
+  width: 100%;
+  border-radius: 5px;
+}
+.pgm_ser .edu img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.friend_gmap{
+  background-image: url('../img/frbgimg.jpg');
+  /*background-repeat: no-repeat;*/
+
+}
+
+.friend_gmap .friend_text h2{
+  font-size: 35px;
+  color: #030D2F;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+}
+.friend_gmap .friend_text p{
+  font-size: 23px;
+  color: #083012;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+}
+
+/*for alumni news letter section*/
+.al_news_letter {
+  text-align: center;
+  padding: 60px;  
+  color: white;
+  background-color:#eee;
+  
+}
+.al_news_letter{
+  background-image:url('../img/bg-newsletter.jpg');
+}
+.al_news_letter .header{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  line-height: 2.5;
+}
+
+/* for alumni blog page*/
+.alumni_blog{
+  /*background-color: #0BA79E;*/
+  margin-top: -20px;
+}
+.alumni_blog .page-header{
+  border-bottom: none;
+}
+.alumni_blog .page-header h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0a213b;
+  margin-bottom: 30px;
+}
+.alumni_blog .al_descp .al_image img{
+  width: 100%;
+  border-radius: 5px;
+  /*box-shadow: 2px 2px 2px 2px;*/
+  /*padding: 3px;*/
+}
+.al_descp .al_author{
+  font-size: 25px;
+  font-weight: bold;
+  color: #08516C;
+
+}
+.al_descp .al_title{
+  font-size: 20px;
+  color: #990b0b;
+
+
+}
+.al_descp .blog_descp{
+  font-size: 14px;
+  color: #072f30;
+  /*line-height: 2;*/
+}
+.al_descp .date{
+  font-size: 12px;
+  color: #F49C11;
+  font-weight: bold;
+}
+.al_descp{
+  padding: 10px;
+}
+.blog_pagination{
+  margin-bottom: 30px;
+}
+
+
+/* for event page */
+.al_event_descp{
+  margin-top: 30px;
+  padding: 20px;
+
+}
+.al_event_descp .al_image img{
+  width: 100%;
+  border-radius: 5px;
+
+}
+.al_event_descp .al_det .upcoming_event h4{
+  color: #F0AD4E;
+
+}
+.al_event_descp .al_det .upcoming_event h3{
+  color:#DE750E;
+
+}
+.al_event_descp .al_det .event_title h2{
+  color: #084554;
+  font-weight: bold;
+
+}
+.al_event_descp .al_det .location p{
+  color: #8A693A;
+  font-size: 16px;
+}
+
+.all_event {
+  background-color: white;
+  
+   
+}
+.all_event .all_event_det{
+  background-color:#fcfcfc;
+  margin-top: 15px;
+  padding: 10px;  
+  border-radius: 10px;
+  line-height: 1.5;
+  border: 1px solid #eee;
+  margin-bottom: 25px;
+}
+.all_event .all_event_det .date{
+  text-align: center;
+}
+.all_event .all_event_det .date .date_day{
+  color: #f7ca18;
+  font-weight: bolder;
+}
+
+.all_event .all_event_det .date .date_month{
+  color:#d9534f;
+  font-weight: bolder;
+}
+.all_event .all_event_det .date .date_year{
+  color:#4b87cb;
+  font-weight:bold;
+}
+.all_event .event_det h3{
+  color: #084554;
+  font-weight: bold;
+}
+.all_event .event_det p{
+  color:#485747;
+  font-size: 15px;
+  
+}
+.all_event .event_det .location p{
+  color:#8A693A;
+  font-size: 13px;
+  
+}
+.all_event .all_event_det .register_button{
+  text-align: center;
+  margin-top: 25px;
+  float: right;
+  padding: 30px;
+}
+
+
+/* for the  latest new page*/
+.page_header .page_title h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0a213b;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.all_news{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:1px solid #c8cbc8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.all_news .all_news_det .news_image img{
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+
+}
+.all_news .all_news_det .news_title h3{
+  color: #084554;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.all_news .all_news_det .news_title p{
+  color: #485747;
+  font-size: 15px;
+  line-height: 1.7;
+
+}
+.all_news .all_news_det .news_title .post_date{
+  color: #a1691b;
+}
+.all_news .all_news_det .read_button{
+  margin-top: 40px;
+}
+
+
+/* for school advantage section */
+.school_adv{
+  padding: 30px;
+  text-align: center;
+  background-color:#f5f7fa;
+  margin-top: 1px;
+}
+.school_adv .sch_heading h2{
+  font-size: 44px;
+  color: #116A93;
+  margin: 20px 0;
+  letter-spacing: 1.8px;
+  font-family: "Montserrat-Light";
+  font-weight: bold;
+}
+.school_adv .sch_descp p{
+  font-size: 18px;
+  font-family: "Montserrat-Light";
+  margin-left: 75px;
+  margin-right: 75px;
+}
+.school_adv .icon{
+  font-size: 44px;
+  margin-top: 30px;
+  color: #7f0909;
+
+}
+.school_adv .count_no{
+  font-size: 30px;
+  font-weight: bold;
+  color: #f8a427;
+  margin-top: 25px;
+}
+.school_adv .text_title{
+  font-size: 20px;
+  margin-top: 10px;
+  color: black;
+  font-weight: bold;
+  font-family: "Montserrat-Light";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================================*/
+
+/*for media query*/
+
+/* for extra small device */
+@media(max-width: 767px){
+  
+  .navbar-default {
+    background-color: white;
+    border-color: white;
+    margin-top: 0px;
+  }
+  .navbar-default .navbar-nav > li > a:focus,
+  .navbar-default .navbar-nav > li > a:hover{
+    color: #0a213b;
+    opacity: 0.5;
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #0c3768;
+     text-align: center;
+  }
+  .dropdown-menu > li > a{
+    text-align: center;
+  }
+  .slider-section .carousel-caption h2 {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 10px;
+  }
+  .footer .foo_image .row .col-xs-3 img{
+    width: 50%;
+  }
+  .alumni_story .al_pic{
+    text-align: center;
+  }
+  .alumni_story .pull-right{
+    text-align: center;
+  }
+  .alumni_story .story_descp{
+    text-align: center;
+  }
+  .university_moto .about_img img {
+    margin-top: 40px;
+    width: 40%;
+    
+  }
+  .university_moto .about_img{
+    text-align: center;
+  }
+  .university_moto .about_des{
+    text-align: center;
+  }
+  .pgm_ser .job_offer img {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .pgm_ser .event_desc img {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .pgm_ser .fund img {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .pgm_ser .edu img {
+    width: 50%;
+    border-radius: 5px;
+  }
+  .pgm_ser{
+    text-align: center;
+  }
+  .all_news{
+    text-align: center;
+  }
+  .all_news .all_news_det .news_image img {
+    width: 50%;
+    
+  }
+  .blog_pagination{
+    text-align: center;
+  }
+  .event_pagination{
+    text-align: center;
+  }
+  .news_pagination{
+    text-align: center;
+  }
+
+}
+
+
+
+/* for small device*/
+@media (min-width: 768px) and (max-width: 991px){
+  
+  .chairman_desk .chairman_image img{
+   width: 100%;
+   margin-top: 150px;
+
+  }
+  .chairman_desk .chairman_message p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 10px;
+    color: black;
+}
+.slider-section .carousel-caption h2 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 10px;
+  }
+  .news_event {
+    margin-top: 30px;
+    padding: 50px;  
+    background-color: #fcfcfc;
+  }
+  .footer .foo_image .row .col-xs-3 img{
+    width: 150%;
+  }
+  .footer .foo_image h4{
+    font-size: 10px;
+  }
+  .al_event_descp .al_det .upcoming_event h3 {
+    font-size: 20px;
+  }
+  .al_event_descp .al_det .event_title h2 {
+    color: #084554;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .al_event_descp .al_image img {
+    margin-top: 30px;
+  }
+
+}
+
+/* for medium device*/
+@media (min-width: 992px) and (max-width: 1199px){
+  
+  .slider-section .carousel-caption h2 {
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .chairman_desk .chairman_image img{
+   width: 100%;
+   margin-top: 80px;
+  }
+  .chairman_desk .chairman_message p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 10px;
+    color: black;
+  }
+  .footer .foo_image h4{
+    font-size: 14px;
+  }
+}
+
+/* for large device */
+@media (min-width: 1200px){
+  
+}
