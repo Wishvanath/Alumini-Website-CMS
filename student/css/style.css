@@ -365,11 +365,11 @@ hr{
 }
 .al_mentor .pf_image img{
   width: 25%;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 .al_mentor .pf_image{
@@ -450,6 +450,7 @@ hr{
 .al_mentor .mes_part p{
   margin-top: 20px;
 }
+
 
 /*============================================================================*/
 
