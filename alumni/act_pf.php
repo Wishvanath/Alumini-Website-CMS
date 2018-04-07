@@ -51,6 +51,14 @@ if (isset($_POST['al_update'])) {
 	 		if (!empty($pre_image)) {
 	 			unlink("../img/".$pre_image);
 	 		}
+
+	 		// update mentor pfofile image
+	 		$mn_upd = "UPDATE `aes_mentor` SET `image` = '$new_file' WHERE `aes_mentor`.`email_id` = '$email_id'";
+	 		$mn_run = mysqli_query($con, $mn_upd);
+	 		if ($mn_run) {
+	 			
+	 		}
+
 	 		 echo '<script language="javascript">';
 			 echo 'alert(" You have Updated your Profile ");';
 			 echo 'window.location.href = "al_profile.php";';

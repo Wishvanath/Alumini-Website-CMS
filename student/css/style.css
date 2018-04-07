@@ -403,6 +403,15 @@ hr{
 }
 .al_mentor .ment_image img{
   width: 100%;
+  padding: 5px;
+}
+.al_mentor .ment_image .thumbnail{
+  width: 80%;
+}
+.al_mentor .ment_image .thumbnail .ment_descp{
+  color: #097294;
+
+  
 }
 .al_mentor .ment_select{
   width: 100px;

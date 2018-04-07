@@ -21,10 +21,15 @@
             <hr>
             <!-- start of php code -->
             <?php 
-              $ment_query = "SELECT * FROM `aes_mentor` ORDER BY `mentor_id`  ";
+              $ment_query = "SELECT * FROM `aes_mentor` ORDER BY `aes_mentor`.`mentor_id` DESC ";
               $ment_run = mysqli_query($con, $ment_query);
               if (mysqli_num_rows($ment_run) > 0) {
-                while ($ment_det = mysqli_fetch_assoc($ment_run)) {  ?>
+               // while ($ment_det = mysqli_fetch_assoc($ment_run)) {  
+                 $row_count = mysqli_num_rows($ment_run);
+                 for ($$row_count=0; $$row_count <12 ; $$row_count++) { 
+                    # code...
+                    $ment_det = mysqli_fetch_assoc($ment_run); ?>
+                           
                   
              
              <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
@@ -34,11 +39,11 @@
                  </div>
                  <hr>
                  <div class="ment_descp">
-                   <h4>Specilization: <?php echo $ment_det['mentor_sp'] ?></h4>
-                   <h5>Contact No: <?php echo $ment_det['contact_no'] ?></h5>
-                   <h5>Email:<?php echo $ment_det['email_id'] ?></h5>
-                   <h5>Available Hours: <?php echo $ment_det['available_hours'] ?></h5>
-                   <h5>Available Days:<?php echo $ment_det['available_days'] ?></h5>
+                   <h6><u>Specilization -</u> <?php echo $ment_det['mentor_sp'] ?></h6>
+                   <h6><u>Mentor Name -</u><?php echo $ment_det['mentor_name'] ?></h6>
+                   <h6><u>Contact No - </u><?php echo $ment_det['contact_no'] ?></h6>
+                   <h6><u>Available Hours -</u> <?php echo $ment_det['available_hours'] ?></h6>
+                   <h6><u>Available Days -</u><?php echo $ment_det['available_days'] ?></h6>
                  </div>
                  <hr>
                  <div class="men_btn_panel">
@@ -54,63 +59,7 @@
               }
 
              ?>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
+             
            </div> <!-- end of row -->
             <hr>
             
