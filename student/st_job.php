@@ -31,7 +31,7 @@
               <div class="search_panel">
                 <form action="st_job.php" name="st_job" id="st_job" method="post">           
                   <div class="form-group">
-                    <input type="text" placeholder="Job Title...." class="form-control" name="st_job_title" id="st_job_title">
+                    <input type="text" placeholder="Job Title...." class="form-control" name="st_job_title" id="st_job_title" required="">
                     <input type="submit" class="job_sea_button" value="Search" name="st_job_search" id="st_job_search">
                   </div>
                 </form>

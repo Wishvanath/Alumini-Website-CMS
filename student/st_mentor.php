@@ -103,7 +103,7 @@
             
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
               <div class="form-group">
-                <input type="text"  name="ment_subject" id="ment_subject" class="form-control" placeholder="Enter Subject :">
+                <input type="text"  name="ment_subject" id="ment_subject" class="form-control" placeholder="Enter Subject :" required="">
               </div>
             </div>
 

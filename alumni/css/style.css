@@ -362,7 +362,7 @@ hr{
   background-color:rgba(127, 9, 9,1);
 }
 .al_mentor .ser_result{
-  max-height: 450px;
+  max-height: 600px;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 700px;
@@ -451,7 +451,10 @@ hr{
 .al_mentor .pf_image{
   text-align: center;
 }
-
+.al_job_search .search_panel #al_job_title{
+  width: 450px;
+  height: 47px;
+}
 
 
 
@@ -463,6 +466,10 @@ hr{
 @media(max-width: 767px){
   body{
     background-color: black;
+  }
+  .al_job_search .search_panel #al_job_title{
+  width: 200px;
+  height: 47px;
   }
   .main_wrapper .page_header .site_image img{
     width: 100%;
@@ -517,6 +524,10 @@ hr{
 @media (min-width: 768px) and (max-width: 991px){
   body{
     background-color: red;
+  }
+  .al_job_search .search_panel #al_job_title{
+  width: 250px;
+  height: 47px;
   }
   .main_wrapper .page_header .site_title h3{
     font-size: 17px;
@@ -573,6 +584,10 @@ hr{
 @media (min-width: 992px) and (max-width: 1199px){
   body{
     background-color: yellow;
+  }
+  .al_job_search .search_panel #al_job_title{
+  width: 350px;
+  height: 47px;
   }
   .main_wrapper .page_header .site_title h3{
     font-size: 23px;
