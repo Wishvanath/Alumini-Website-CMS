@@ -165,7 +165,7 @@ hr{
   margin-top: 50px;
 }
 .al_mentor .search_panel {
-  margin-top: 100px;
+  margin-top: 10px;
 }
 .al_mentor .job_sea_button{
   margin-top: -47px;
@@ -273,7 +273,7 @@ hr{
   margin-top: 30px;
 }
 .al_mentor .page_head h2{
-  width: 200px;
+  width: 205px;
   padding: 7px;
   background-color: #558CBD;
   color: white;
@@ -282,11 +282,15 @@ hr{
   font-size: 25px;
 
 }
+.al_mentor #st_job_title{
+  width: 650px;
+  height: 47px;
+}
 .al_mentor .page_head h2:hover{
   background-color:rgba(127, 9, 9,1);
 }
 .al_mentor .ser_result{
-  max-height: 450px;
+  max-height: 700px;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 700px;
@@ -294,7 +298,8 @@ hr{
   border: 1px solid #EEEEEE;
   padding: 4px;
   border-radius: 3px;
-  width: 550px;
+  width: 750px;
+  margin-bottom: 80px;
 }
 .al_mentor .men_save{
     width: 120px;
@@ -470,6 +475,16 @@ hr{
   body{
     background-color: black;
   }
+  .al_mentor #st_job_title{
+  width: 300px;
+  height: 47px;
+  margin-top: 20px;
+  }
+  .al_mentor .job_sea_button{
+    
+
+
+  }
   .main_wrapper .page_header .site_image img{
     width: 100%;
   
@@ -512,7 +527,7 @@ hr{
   border: 1px solid #EEEEEE;
   padding: 4px;
   border-radius: 3px;
-  width: 300px;
+  width: 400px;
   }
   .al_mentor .mentor_button{
    margin-left: 100px;
@@ -527,6 +542,10 @@ hr{
 @media (min-width: 768px) and (max-width: 991px){
   body{
     background-color: red;
+  }
+  .al_mentor #st_job_title{
+  width: 400px;
+  height: 47px;
   }
   .main_wrapper .page_header .site_title h3{
     font-size: 17px;
@@ -572,7 +591,7 @@ hr{
   border: 1px solid #EEEEEE;
   padding: 4px;
   border-radius: 3px;
-  width: 340px;
+  width: 470px;
   }
   .al_mentor .mentor_button{
     margin-left: 110px;
@@ -586,6 +605,10 @@ hr{
 @media (min-width: 992px) and (max-width: 1199px){
   body{
     background-color: yellow;
+  }
+  .al_mentor #st_job_title{
+  width: 550px;
+  height: 47px;
   }
   .main_wrapper .page_header .site_title h3{
     font-size: 23px;
@@ -621,7 +644,7 @@ hr{
   border: 1px solid #EEEEEE;
   padding: 4px;
   border-radius: 3px;
-  width: 450px;
+  width: 615px;
   }
   .al_mentor .mentor_button{
     margin-left: 170px;

@@ -11,6 +11,27 @@
     <?php 
       require_once('inc/head_nav.php');
      ?>
+
+  <!-- write code for php mail function of mentor  -->
+  <?php 
+    // if (isset($_GET['select'])) {
+    //   $to = $_GET['select'];
+    //   $subject = "Mentorship mail";
+    //   $message = "Dear"."  ". $to ."You have Selected as an Mentor by.. ". $session_id;
+    //   $from = $session_id;
+    //   $headers = "From: $from";
+    //   mail($to,$subject,$message,$headers);
+    //   echo "Mail Sent.";
+     
+    // }
+
+   ?>
+  <!-- end of mail function of mentor -->
+
+
+
+
+
     <!-- end of head and nav of page -->
          <!-- for mentor details  -->
          <div class="container al_mentor">
@@ -26,7 +47,7 @@
               if (mysqli_num_rows($ment_run) > 0) {
                // while ($ment_det = mysqli_fetch_assoc($ment_run)) {  
                  $row_count = mysqli_num_rows($ment_run);
-                 for ($$row_count=0; $$row_count <12 ; $$row_count++) { 
+                 for ($row_count=0; $row_count <12 ; $row_count++) { 
                     # code...
                     $ment_det = mysqli_fetch_assoc($ment_run); ?>
                            
@@ -47,7 +68,9 @@
                  </div>
                  <hr>
                  <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
+                   <a href="<?php $_SERVER['PHP_SELF'] ?>?select=<?php echo $ment_det['email_id'] ?>">
+                     <input type="submit" class="ment_select" value="Select">
+                   </a>
                  </div>
                </div>
              </div>
@@ -62,9 +85,14 @@
              
            </div> <!-- end of row -->
             <hr>
-            
+   
+
+
+
+
 
        <!-- find mentor section  -->
+       <form name="find_mentor" id="find_ment" method="post" action="st_mentor.php">
            <div class="row find_mentor">
              <div class="page_head">
                  <h2>Find Mentor</h2>
@@ -72,30 +100,43 @@
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
               
             </div>
+            
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Enter Subject :">
+                <input type="text"  name="ment_subject" id="ment_subject" class="form-control" placeholder="Enter Subject :">
               </div>
             </div>
+
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
-              <input type="submit" data-tggle="tab" href="#select" class="search_job">
+              <input type="submit"  class="search_job" name="find_ment" id="find_ment">
             </div>
-             
+           
            </div><!-- end of row -->
+         </form>
            <hr>
            <div class="row mentor_list">
+            <!-- code for find mentor  -->
+<?php 
+
+  if (isset($_POST['find_ment'])) {
+    $ment_subject = $_POST['ment_subject'];
+    $find_qry = "SELECT * FROM `aes_mentor` WHERE `mentor_sp` LIKE '$ment_subject%'";
+    $find_run = mysqli_query($con,$find_qry) or die("can't fetch the data from database".mysqli_error($con));
+    if (mysqli_num_rows($find_run) > 0) {
+       while ($f_ment = mysqli_fetch_assoc($find_run)) {  ?>
+
              <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
                <div class="thumbnail">
                  <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
+                   <img src="../img/<?php echo $f_ment['image'] ?>" alt="Menor Image">
                  </div>
                  <hr>
                  <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
+                   <h6><u>Specilization -</u> <?php echo $f_ment['mentor_sp'] ?></h6>
+                   <h6><u>Mentor Name -</u><?php echo $f_ment['mentor_name'] ?></h6>
+                   <h6><u>Contact No - </u><?php echo $f_ment['contact_no'] ?></h6>
+                   <h6><u>Available Hours -</u> <?php echo $f_ment['available_hours'] ?></h6>
+                   <h6><u>Available Days -</u><?php echo $f_ment['available_days'] ?></h6>
                  </div>
                  <hr>
                  <div class="men_btn_panel">
@@ -103,66 +144,20 @@
                  </div>
                </div>
              </div>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
-             <div class="col-sm-3 col-md-3 col-lg-3 col-xs-3 ment_image">
-               <div class="thumbnail">
-                 <div class="image">
-                   <img src="img/avatar.png" alt="Menor Image">
-                 </div>
-                 <hr>
-                 <div class="ment_descp">
-                   <h4>Specilization:</h4>
-                   <h5>Contact No:</h5>
-                   <h5>Email:</h5>
-                   <h5>Available Hours:</h5>
-                   <h5>Available Days:</h5>
-                 </div>
-                 <hr>
-                 <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
-                 </div>
-               </div>
-             </div>
-           </div> <!-- end of row -->
+
+       <?php  
+       }
+    }
+    else{
+      echo "No Such Mentor is available ...Please find later.";
+    }
+  }
+
+ ?>
+<!-- end of find mentor -->        
+</div> <!-- end of row -->
        
-         </div>  <!-- end of al mentor details -->
+</div>  <!-- end of al mentor details -->
             
 
          
