@@ -14,25 +14,32 @@
 <!-- ==================== start of alumni event page section==================== -->
 <div class="al_event_descp">
   <div class="container">
+        <?php 
+        $event_query = "SELECT * FROM `aes_events` ORDER BY `post_date` DESC ";
+        $event_run = mysqli_query($con, $event_query);
+        if(mysqli_num_rows($event_run) > 0){
+          $event = mysqli_fetch_assoc($event_run);  ?>
+
     <div class="row">
       <div class="col-md-5 col-sm-5 col-lg-5 al_image">
-        <img src="img/al_event_image.jpg" alt="Alumni Event Image">
+        <img src="img/<?php echo $event['image'] ?>" alt="Alumni Event Image">
         
       </div>
       <div class="col-md-7 col-sm-7 col-lg-5 al_det">
         <div class="upcoming_event">
           <h3>UPCOMING EVENTS </h3>
-          <h4>10 MARCH 2018</h4>
+          <h4> <?php echo $event['event_title'] ?></h4>
+          <h4>POST DATE : <?php echo $event['post_date'] ?></h4>
         </div>
         <div class="event_title">
           <h2>
-            ANNUAL MEET UP AND SCHOLARSHIP PRESENTATIONS
+            <?php echo $event['event_descp'] ?>
           </h2>
         </div>
         <div class="location">
           <span>
             <p><i class="fa fa-map-marker fa-2x"></i>
-              Sayidan Street, Gondomanan, 8993, San Francisco, CA 
+             <?php echo $event['event_ven_date'] ?>
             </p>
           </span>
         </div>
@@ -40,31 +47,46 @@
           <input type="submit" value="Join Now" class="btn btn-warning btn-lg">
         </div>
       </div>
+
+       <?php
+           
+          
+        }
+        else{
+          echo "data not found in the database";
+        }
+       ?>
     </div>
   </div>
 </div>
 <!-- ==================== end of alumni event page section====================== -->
 
-<!-- ==================== start of all event details section ================== -->\
+<!-- ==================== start of all event details section ================== -->
+<?php 
+        $event_query = "SELECT * FROM `aes_events` ORDER BY `post_date` ASC ";
+        $event_run = mysqli_query($con, $event_query);
+        if(mysqli_num_rows($event_run) > 0){
+          $row_count = mysqli_num_rows($event_run);
+         while ($event = mysqli_fetch_assoc($event_run)) { ?>
+          
+         
 <div class="all_event">
   <div class="container">
     <div class="row all_event_det">
       <div class="col-md-2 col-sm-2 col-lg-2 date">
-         <h2 class="date_day">10</h2>
-         <h3 class="date_month">March</h3>
-         <h3 class="date_year">2018</h3>
+         <img src="img/<?php echo $event['image'] ?>" alt="">
       </div>
       <div class="col-md-7 col-sm-7 col-lg-7 event_det">
-        <h3>Soap Sporting at Clean The World</h3>
+        <h3><?php echo $event['event_title'] ?></h3>
         <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+          <?php echo $event['event_descp'] ?>
         </p>
         <div class="location">
           <span>
             <p>
             <i class="fa fa-map-marker fa-2x"></i>
             
-              Gondomanan Street 209, California 
+             <?php echo $event['event_ven_date'] ?>
             </p>
           </span>
         </div>
@@ -77,108 +99,15 @@
     </div>
   </div>
 </div>
+  <?php
+           
+          }
+        }
+        else{
+          echo "data not found in the database";
+        }
+       ?>
 
-<!-- second row of event -->
-<div class="all_event">
-  <div class="container">
-    <div class="row all_event_det">
-      <div class="col-md-2 col-sm-2 col-lg-2 date">
-         <h2 class="date_day">10</h2>
-         <h3 class="date_month">March</h3>
-         <h3 class="date_year">2018</h3>
-      </div>
-      <div class="col-md-7 col-sm-7 col-lg-7 event_det">
-        <h3>Soap Sporting at Clean The World</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="location">
-          <span>
-            <p>
-            <i class="fa fa-map-marker fa-2x"></i>
-            
-              Gondomanan Street 209, California 
-            </p>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-lg-3">
-        <div class="register_button">
-          <input type="button" value="Register" class="btn btn-danger btn-lg">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end of second row -->
-
-<!-- third row of event  -->
-<div class="all_event">
-  <div class="container">
-    <div class="row all_event_det">
-      <div class="col-md-2 col-sm-2 col-lg-2 date">
-         <h2 class="date_day">10</h2>
-         <h3 class="date_month">March</h3>
-         <h3 class="date_year">2018</h3>
-      </div>
-      <div class="col-md-7 col-sm-7 col-lg-7 event_det">
-        <h3>Soap Sporting at Clean The World</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="location">
-          <span>
-            <p>
-            <i class="fa fa-map-marker fa-2x"></i>
-            
-              Gondomanan Street 209, California 
-            </p>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-lg-3">
-        <div class="register_button">
-          <input type="button" value="Register" class="btn btn-danger btn-lg">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--  end of third row -->
-
-<!--  fourth row of the event -->
-<div class="all_event">
-  <div class="container">
-    <div class="row all_event_det">
-      <div class="col-md-2 col-sm-2 col-lg-2 date">
-         <h2 class="date_day">10</h2>
-         <h3 class="date_month">March</h3>
-         <h3 class="date_year">2018</h3>
-      </div>
-      <div class="col-md-7 col-sm-7 col-lg-7 event_det">
-        <h3>Soap Sporting at Clean The World</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="location">
-          <span>
-            <p>
-            <i class="fa fa-map-marker fa-2x"></i>
-            
-              Gondomanan Street 209, California 
-            </p>
-          </span>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-lg-3">
-        <div class="register_button">
-          <input type="button" value="Register" class="btn btn-danger btn-lg">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--  end of the fourth row -->
  <!-- start of pagination section -->
      <div class="row event_pagination">
        <div class="container">

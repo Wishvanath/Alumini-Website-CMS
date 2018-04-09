@@ -646,7 +646,8 @@ font-weight: bold;
 }
 .al_event_descp .al_image img{
   width: 100%;
-  border-radius: 5px;
+  border-radius:5px;
+  margin-top: 20px;
 
 }
 .al_event_descp .al_det .upcoming_event h4{
@@ -659,7 +660,8 @@ font-weight: bold;
 }
 .al_event_descp .al_det .event_title h2{
   color: #084554;
-  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;  
 
 }
 .al_event_descp .al_det .location p{
@@ -671,6 +673,15 @@ font-weight: bold;
   background-color: white;
   
    
+}
+.all_event .date img{
+  width: 100%;
+  margin-top: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 .all_event .all_event_det{
   background-color:#fcfcfc;
