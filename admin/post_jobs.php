@@ -34,11 +34,11 @@
                 <a href="mentor_list.php" class="list-group-item text-center mentor_det">
                   <h4 class="glyphicon glyphicon-eye-open"></h4><br>Mentor Profile
                 </a>
-                <a href="mentee_list.php" class="list-group-item text-center mentee_det">
-                  <h4 class="glyphicon glyphicon-user"></h4><br>Mentee Profile
+                <a href="student_msg.php" class="list-group-item text-center mentee_det">
+                  <h4 class="glyphicon glyphicon-user"></h4><br>Message for Student
                 </a>
                 <a href="faculty.php" class="list-group-item text-center teacher_det">
-                  <h4 class="glyphicon glyphicon-king"></h4><br>Our Teacher
+                  <h4 class="glyphicon glyphicon-king"></h4><br>Teacher Profile
                 </a>
                 <a href="adjunct_pf.php" class="list-group-item text-center adj_professor">
                   <h4 class="glyphicon glyphicon-star"></h4><br>Adjunct Professor

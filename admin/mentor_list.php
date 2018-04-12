@@ -31,14 +31,14 @@
                 <a href="alumni_list.php" class="list-group-item text-center alumni_det">
                   <h4 class="glyphicon glyphicon-education"></h4><br>Alumni Profile
                 </a>
-                <a href="mentor_list.php" class="list-group-item text-center mentor_det active">
+                <a href="mentor_list.php" class="list-group-item text-center mentor_det">
                   <h4 class="glyphicon glyphicon-eye-open"></h4><br>Mentor Profile
                 </a>
-                <a href="mentee_list.php" class="list-group-item text-center mentee_det">
-                  <h4 class="glyphicon glyphicon-user"></h4><br>Mentee Profile
+                <a href="student_msg.php" class="list-group-item text-center mentee_det active">
+                  <h4 class="glyphicon glyphicon-user"></h4><br>Message for Student
                 </a>
                 <a href="faculty.php" class="list-group-item text-center teacher_det">
-                  <h4 class="glyphicon glyphicon-king"></h4><br>Our Teacher
+                  <h4 class="glyphicon glyphicon-king"></h4><br>Teacher Profile
                 </a>
                 <a href="adjunct_pf.php" class="list-group-item text-center adj_professor">
                   <h4 class="glyphicon glyphicon-star"></h4><br>Adjunct Professor
@@ -59,107 +59,95 @@
           <div class="bhoechie-tab-content active">
             <div class="row">
               <div class="head_title">
-                <h3>Mentor Details :</h3>
+                <h3>Mentee Details :</h3>
               </div>
-              <!-- start of mentor details section -->
-              <div class="container-fluid mentor_list">
+              <!-- start of mentee details section -->
+              <div class="container-fluid mentee_list">
                 <table class="table table-striped table-responsive table-bordered">
                   <thead>
-                      <th>M_Id</th>
-                      <th>Mentor Name</th>
-                      <th>Mentor Specialization</th>
+                      <th>Mn_Id</th>
+                      <th>Mentee Name</th>
+                      <th>Email Id</th>
                       <th>Contact No</th>
-                      <th>Available Hours</th>
-                      <th>Available Days</th>
+                      <th>Selected Course</th>
+
                   </thead>
                   <tbody>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
+                      </tr><tr>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
                       <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
+                        <td>1</td>
+                        <td>Shiva</td>
+                        <td>shivakanan@gmail.com</td>
+                        <td>8904562334</td>
+                        <td>Andriod</td>
                       </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-
                       
                   </tbody>
                            
                 </table>
               </div>
-              <!-- end of mentor details section -->
+              <!-- end of mentee details section -->
 
               
             </div>
