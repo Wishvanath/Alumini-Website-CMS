@@ -25,9 +25,9 @@ require_once('inc/db.php');
 		exit();
 	}
 	if ($file_extension == 'jpg' || $file_extension == 'jpeg' || $file_extension == 'png' || $file_extension =='gif') {
-		if ($file_size >= 300000) {
+		if ($file_size >= 200000) {
 		echo '<script language="javascript">';
-		echo 'alert(" You Image size is more then 300 KB. Press OK Button to redirect Home Page.. ");';
+		echo 'alert(" You Image size is more then 200 KB. Press OK Button to redirect Home Page.. ");';
 		echo 'window.location.href = "al_job.php";';
 	 	echo '</script>';
 		}

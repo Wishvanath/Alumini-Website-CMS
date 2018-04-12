@@ -548,13 +548,15 @@ font-weight: bold;
 
 .friend_gmap{
   background-image: url('../img/frbgimg.jpg');
-  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  background-repeat:no-repeat;
+  color: white; 
 
 }
 
 .friend_gmap .friend_text h2{
-  font-size: 35px;
-  color: #030D2F;
+  font-size: 30px;
+  color: white;
   text-align: center;
   font-weight: bold;
   margin-top: 100px;
@@ -563,29 +565,35 @@ font-weight: bold;
 }
 .friend_gmap .friend_text p{
   font-size: 23px;
-  color: #083012;
+  color: black;
   text-align: center;
   letter-spacing: 2px;
   margin-bottom: 100px;
 }
 
-/*for alumni news letter section*/
-.al_news_letter {
-  text-align: center;
-  padding: 60px;  
-  color: white;
-  background-color:#eee;
-  
+/* for contact us page section*/
+.con_map {
+  margin-top: 30px;
+    background-color: white;
+    padding: 3px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #E3E3E3;
 }
-.al_news_letter{
-  background-image:url('../img/bg-newsletter.jpg');
+.contact_form {
+    background-color: white;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid #E3E3E3;
+    margin-bottom: 30px;
 }
-.al_news_letter .header{
-  margin-top: 50px;
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-  line-height: 2.5;
+.contact_form h2 {
+    color: #24A7CF;
+    text-align: center;
 }
+
+/*end of contact us page section*/
 
 /* for alumni blog page*/
 .alumni_blog{

@@ -450,13 +450,14 @@ hr{
     margin-top: 0px 
 }
 .al_mentor .mes_part{
-  background-color: #558cbd;
+  
+  color: #096F81;
   -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);;
    box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
    padding: 20px;
    height: 500px;
    margin-top: -50px;
-   color: white;
+   
    line-height: 25px;
    font-size: 15px;
    letter-spacing: 1.5px; 

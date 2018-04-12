@@ -28,7 +28,7 @@
       <div class="col-md-7 col-sm-7 col-lg-5 al_det">
         <div class="upcoming_event">
           <h3>UPCOMING EVENTS </h3>
-          <h4> <?php echo $event['event_title'] ?></h4>
+          <h4 style="text-transform: uppercase; font-weight: bold;color: #0D5E80;"> <?php echo $event['event_title'] ?></h4>
           <h4>POST DATE : <?php echo $event['post_date'] ?></h4>
         </div>
         <div class="event_title">
@@ -43,9 +43,7 @@
             </p>
           </span>
         </div>
-        <div class="join_button">
-          <input type="submit" value="Join Now" class="btn btn-warning btn-lg">
-        </div>
+        
       </div>
 
        <?php
@@ -73,10 +71,10 @@
 <div class="all_event">
   <div class="container">
     <div class="row all_event_det">
-      <div class="col-md-2 col-sm-2 col-lg-2 date">
+      <div class="col-md-3 col-sm-3 col-lg-3 date">
          <img src="img/<?php echo $event['image'] ?>" alt="">
       </div>
-      <div class="col-md-7 col-sm-7 col-lg-7 event_det">
+      <div class="col-md-9 col-sm-9 col-lg-9 event_det">
         <h3><?php echo $event['event_title'] ?></h3>
         <p>
           <?php echo $event['event_descp'] ?>
@@ -91,11 +89,7 @@
           </span>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3 col-lg-3">
-        <div class="register_button">
-          <input type="button" value="Register" class="btn btn-danger btn-lg">
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

@@ -14,16 +14,19 @@
 
   <!-- write code for php mail function of mentor  -->
   <?php 
-    // if (isset($_GET['select'])) {
-    //   $to = $_GET['select'];
-    //   $subject = "Mentorship mail";
-    //   $message = "Dear"."  ". $to ."You have Selected as an Mentor by.. ". $session_id;
-    //   $from = $session_id;
-    //   $headers = "From: $from";
-    //   mail($to,$subject,$message,$headers);
-    //   echo "Mail Sent.";
+    if (isset($_GET['select'])) {
+      $to = $_GET['select'];
+      $subject = "Mentorship mail";
+      $message = "Dear"."  ". $to ."You have Selected as an Mentor by.. ". $session_id;
+      $from = $session_id;
+      $headers = "From: $from";
+      mail($to,$subject,$message,$headers);
+       echo '<script language="javascript">';
+       echo 'alert("We will get back you with in 2 Working days via Email.");';
+       echo 'window.location.href = "st_mentor.php";';
+       echo '</script>';
      
-    // }
+    }
 
    ?>
   <!-- end of mail function of mentor -->
@@ -140,7 +143,9 @@
                  </div>
                  <hr>
                  <div class="men_btn_panel">
-                   <input type="submit" class="ment_select" value="Select">
+                   <a href="<?php $_SERVER['PHP_SELF'] ?>?select=<?php echo $ment_det['email_id'] ?>">
+                     <input type="submit" class="ment_select" value="Select">
+                   </a>
                  </div>
                </div>
              </div>

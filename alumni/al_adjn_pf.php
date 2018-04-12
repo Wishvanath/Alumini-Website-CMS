@@ -69,16 +69,16 @@
                        
                        <div class="form-group">
                          <label for="subject"><h5>Teaching Subject : *</h5></label>
-                         <input type="text" class="form-control" name="subject" id="subject">
+                         <input type="text" class="form-control" name="subject" id="subject" required="">
                        </div>
                        
                        <div class="form-group">
                          <label for="available hours"><h5>Available Hours : *</h5></label>
-                         <input type="text" class="form-control" name="avl_hours" id ="avl_hours">
+                         <input type="text" class="form-control" name="avl_hours" id ="avl_hours" required="">
                        </div>
                        <div class="form-group">
                          <label for="availabel days"><h5>Available Days : *</h5></label>
-                         <input type="text" class="form-control" name="avl_days" id="avl_days">
+                         <input type="text" class="form-control" name="avl_days" id="avl_days" required="">
                        </div>
                        <div class="btn_pannel">
                          <input type="submit" class="men_save" value="Submit" name="btn_save" id="btn_save">

@@ -15,160 +15,59 @@
   <div class="container-fluid">
     <div class="row">
       <div class="page-header">
-        <h2>Alumni Story / Blog</h2>
+        <h2>Alumni Blog</h2>
       </div>
     </div>
     <!-- for the first row of the alumni blog -->
     <div class="row al_descp">
       <div class="container">
+        <?php 
+  $blog_query = "SELECT * FROM `aes_blog` ORDER BY `aes_blog`.`publish_date` DESC";
+  $blog_run = mysqli_query($con, $blog_query) or die("Can't fetch the data from database.".mysql_error($con));
+  if (mysqli_num_rows($blog_run)>0) {
+       while ($blog = mysqli_fetch_assoc($blog_run)) {  ?>
+    
         <div class="col-sm-6">
           <div class="al_image">
-            <img src="img/story-img1.jpg" alt="Alumni story image">
+            <img src="img/<?php echo $blog['blog_image'] ?>" alt="Alumni story image">
           </div>
           <div class="al_descp">
             <h3 class="al_author">
-              Julie Scott : 
+              <?php echo $blog['author'] ?> : 
             </h3>
             <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
+              <?php echo $blog['blog_title'] ?>
             </h4>
             
             <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
+              <?php echo $blog['blog_content'] ?>
               <a href="#">Read More</a>
             </p>
             <span class="date">
-              10 March 2018
+              <?php echo $blog['publish_date'] ?>
             </span>
           </div>
+           <hr style="border-top: 1px solid #D08B07;">
         </div>
-        <div class="col-sm-6">
-          <div class="al_image">
-            <img src="img/story-img2.jpg" alt="Alumni story image">
-          </div>
-          <div class="al_descp">
-            <h3 class="al_author">
-              Julie Scott : 
-            </h3>
-            <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
-            </h4>
+
+        <?php  
+            }
             
-            <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
-              <a href="#">Read More</a>
-            </p>
-            <span class="date">
-              10 March 2018
-            </span>
-          </div>
-        </div>
-        
+          }
+          else{
+            echo" Data not found in the database";
+          }
+         ?>
+       
       </div>
+
     </div>
     <!-- end of the first row of the alumni blog -->
 
 
-    <!-- for the second row of the alumni blog  -->
-    <div class="row al_descp">
-      <div class="container">
-        <div class="col-sm-6">
-          <div class="al_image">
-            <img src="img/story-img3.jpg" alt="Alumni story image">
-          </div>
-          <div class="al_descp">
-            <h3 class="al_author">
-              Julie Scott : 
-            </h3>
-            <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
-            </h4>
-            
-            <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
-              <a href="#">Read More</a>
-            </p>
-            <span class="date">
-              10 March 2018
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="al_image">
-            <img src="img/story-img4.jpg" alt="Alumni story image">
-          </div>
-          <div class="al_descp">
-            <h3 class="al_author">
-              Julie Scott : 
-            </h3>
-            <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
-            </h4>
-            
-            <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
-              <a href="#">Read More</a>
-            </p>
-            <span class="date">
-              10 March 2018
-            </span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <!--  end of the second row of alumni blog -->
+    
 
-
-    <!-- for the third row of the alumni blog -->
-     <div class="row al_descp">
-      <div class="container">
-        <div class="col-sm-6">
-          <div class="al_image">
-            <img src="img/story-img5.jpg" alt="Alumni story image">
-          </div>
-          <div class="al_descp">
-            <h3 class="al_author">
-              Julie Scott : 
-            </h3>
-            <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
-            </h4>
-            
-            <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
-              <a href="#">Read More</a>
-            </p>
-            <span class="date">
-              10 March 2018
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="al_image">
-            <img src="img/story-img6.jpg" alt="Alumni story image">
-          </div>
-          <div class="al_descp">
-            <h3 class="al_author">
-              Julie Scott : 
-            </h3>
-            <h4 class="al_title">
-              In Mind And Heart, Never Far From Home
-            </h4>
-            
-            <p class="blog_descp">
-              Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum.
-              <a href="#">Read More</a>
-            </p>
-            <span class="date">
-              10 March 2018
-            </span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <!-- end of the third row or the alumni blog -->
+    
 
     <!-- start of pagination section -->
      <div class="row blog_pagination">
@@ -194,32 +93,7 @@
 <!-- ===================end of the alumni story section ============= -->
 
 
-<!-- ==================== start of the alumni news letter ================= -->
-<div class="al_news_letter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <div class="al_header">
-          <h2>
-            Don’t Miss Awesome Story From Our Alumni
-          </h2>
-          <p>
-            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-          </p>
-        </div>
-        <form action="">
-          <div class="form-group">
-            <input type="email" name="alumni_email" placeholder="Your Email :" class="form-control">
-          </div>
-          <input type="submit" value="SUBSCRIBE" class="btn btn-success btn-group-lg">
-        </form>
-      </div>
-      <div class="col-md-2"></div>
-    </div>
-  </div>
-</div>
-<!-- ==================== end of the alumni news letter =================== -->
+
 
 
 <!-- ===================== footer section ===================== -->

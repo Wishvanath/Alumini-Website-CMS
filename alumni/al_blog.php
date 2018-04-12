@@ -60,19 +60,19 @@
                          <input type="text" name="author" id="author" class="form-control" value="<?php echo $author ?>">
                        </div>
                        <div class="form-group">
-                         <label for="name"><h5>Blog Title :</h5></label>
-                         <input type="text" class="form-control" name="blog_title" id="blog_title">
+                         <label for="name"><h5>Blog Title : *</h5></label>
+                         <input type="text" class="form-control" name="blog_title" id="blog_title" required="">
                        </div>
                        <div class="form-group">
                          <label for="contact no"><h5>Content : *</h5></label>
                        </div>
                        <div class="text-area">
-                         <textarea name="blog_content" id="blog_content" cols="30" rows="15" class="form-control"></textarea>
+                         <textarea name="blog_content" id="blog_content" cols="30" rows="15" class="form-control" required=""></textarea>
                        </div>
                        <div class="form-group">
                         <span>
-                          <label for="Select_image"><h4>Select Blogger Image : *</h4></label>
-                          <input type="file" name="img" id="img">
+                          <label for="Select_image"><h4>Select Blogger Image (Max Size- 200KB) : *</h4></label>
+                          <input type="file" name="img" id="img" required=" ">
                         </span>
                       </div>
                        

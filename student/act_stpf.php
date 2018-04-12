@@ -29,9 +29,9 @@ if (isset($_POST['btn_update'])) {
 		exit();
 	}
 	if ($file_extension == 'jpg' || $file_extension == 'jpeg' || $file_extension == 'png' || $file_extension =='gif') {
-		if ($file_size >= 300000) {
+		if ($file_size >= 200000) {
 		echo '<script language="javascript">';
-		echo 'alert(" Your Image size is more then 300 KB.. ");';
+		echo 'alert(" Your Image size is more then 200 KB.. ");';
 		echo 'window.location.href = "st_profile.php";';
 	 	echo '</script>';
 		}

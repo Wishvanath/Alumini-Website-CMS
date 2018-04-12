@@ -49,8 +49,8 @@
                   </div>
                   <div class="form-group">
                     <span>
-                      <label for="Select_image"><h4>Select a Job Image : *</h4></label>
-                      <input type="file" name="img">
+                      <label for="Select_image"><h4>Select a Job Image(Max Size : 200KB) : *</h4></label>
+                      <input type="file" name="img" required="">
                     </span>
                   </div>
                   <div class="btn_panel">

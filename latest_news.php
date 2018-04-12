@@ -29,109 +29,43 @@
 <!-- =================== end of page title section ========================= -->
 <div class="all_news_section">
   <!-- first row of news -->
+  <!-- fetch the data from news table -->
+        <?php 
+          $news_query = "SELECT * FROM `aes_news` ORDER BY `post_date` DESC ";
+          $news_run = mysqli_query($con, $news_query) or die("Can't fetch the data from database.".mysqli_error($con));
+          if(mysqli_num_rows($news_run) > 0){
+            while ($news = mysqli_fetch_assoc($news_run)) { ?>
+
   <div class="container all_news">
     <div class="row all_news_det">
-      <div class = "col-md-2 col-sm-2 col-lg-2 news_image">
-        <img src="img/news1.jpg" alt="News Image">
+      <div class = "col-md-3 col-sm-3 col-lg-3 news_image">
+        <img src="img/<?php echo $news['image'] ?>" alt="News Image">
       </div>
-      <div class="col-md-8 col-sm-8 col-lg-8 news_title">
-        <h3>Infosys goes TCS way</h3>
+      <div class="col-md-9 col-sm-9 col-lg-9 news_title">
+        <h3><?php echo $news['news_title'] ?></h3>
         <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+          <?php echo $news['news_descp'] ?>
         </p>
         <div class="post_date">
           <span>
             <i class="fa fa-clock-o"></i>
-            Post Date : 10 March 2018
+            Post Date : <?php echo $news['post_date'] ?>
           </span>
         </div>
       </div>
-      <div class="col-md-2 col-sm-2 col-lg-2">
-        <div class="read_button">
-          <input type="button" value="Read More" class="btn btn-warning">
-        </div>
-      </div>
+      
     </div>
   </div>
+  <?php  
+            }
+            
+          }
+          else{
+            echo" Data not found in the database";
+          }
+         ?>
   <!--  end of first row -->
-  <!-- second row of news -->
-  <div class="container all_news">
-    <div class="row all_news_det">
-      <div class = "col-md-2 col-sm-2 col-lg-2 news_image">
-        <img src="img/news1.jpg" alt="News Image">
-      </div>
-      <div class="col-md-8 col-sm-8 col-lg-8 news_title">
-        <h3>Infosys goes TCS way</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="post_date">
-          <span>
-            <i class="fa fa-clock-o"></i>
-            Post Date : 10 March 2018
-          </span>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-2 col-lg-2">
-        <div class="read_button">
-          <input type="button" value="Read More" class="btn btn-warning">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  end of second row -->
-  <!-- third row of news -->
-  <div class="container all_news">
-    <div class="row all_news_det">
-      <div class = "col-md-2 col-sm-2 col-lg-2 news_image">
-        <img src="img/news1.jpg" alt="News Image">
-      </div>
-      <div class="col-md-8 col-sm-8 col-lg-8 news_title">
-        <h3>Infosys goes TCS way</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="post_date">
-          <span>
-            <i class="fa fa-clock-o"></i>
-            Post Date : 10 March 2018
-          </span>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-2 col-lg-2">
-        <div class="read_button">
-          <input type="button" value="Read More" class="btn btn-warning">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end of third row -->
-  <!-- fourth row of news -->
-  <div class="container all_news">
-    <div class="row all_news_det">
-      <div class = "col-md-2 col-sm-2 col-lg-2 news_image">
-        <img src="img/news1.jpg" alt="News Image">
-      </div>
-      <div class="col-md-8 col-sm-8 col-lg-8 news_title">
-        <h3>Infosys goes TCS way</h3>
-        <p>
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-        </p>
-        <div class="post_date">
-          <span>
-            <i class="fa fa-clock-o"></i>
-            Post Date : 10 March 2018
-          </span>
-        </div>
-      </div>
-      <div class="col-md-2 col-sm-2 col-lg-2">
-        <div class="read_button">
-          <input type="button" value="Read More" class="btn btn-warning">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end of fourth row  -->
+  
 </div>
 <!-- start of pagination section -->
      <div class="row news_pagination">

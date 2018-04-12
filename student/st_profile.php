@@ -89,8 +89,8 @@
                        <br>
                        <div class="form-group">
                         <span>
-                          <label for="Select_image"><h5>Select a Profile Image : *</h5></label>
-                          <input type="file" name="img">
+                          <label for="Select_image"><h5>Select a Profile Image(Max Size : 200KB) : *</h5></label>
+                          <input type="file" name="img" required="">
                         </span>
                       </div>
                       <div class="form-group">

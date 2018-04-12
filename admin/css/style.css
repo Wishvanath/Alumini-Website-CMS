@@ -21,7 +21,7 @@ body{
 .main_wrapper .student_list{
     max-height: 600px;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     height: 900px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -34,7 +34,7 @@ body{
 .main_wrapper .alumni_list{
     max-height: 600px;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll\;
     height: 900px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;

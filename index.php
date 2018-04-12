@@ -31,7 +31,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img/slider_image.jpg" alt="first slider Image">
+            <img src="img/slider_1.jpg" alt="first slider Image">
               <div class="carousel-caption">
                 <h2>
                   <span class="text-bold">
@@ -45,7 +45,7 @@
               </div>
           </div>
           <div class="item">
-            <img src="img/slider_image.jpg" alt="second slider Image">
+            <img src="img/slider_3.jpg" alt="second slider Image">
             <div class="carousel-caption">
                 <h2>
                   <span class="text-bold">
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="img/slider_image.jpg" alt="Third slider Image">
+            <img src="img/slider_2.jpg" alt="Third slider Image">
             <div class="carousel-caption">
                 <h2>
                   <span class="text-bold">
