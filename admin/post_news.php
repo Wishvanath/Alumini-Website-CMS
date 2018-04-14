@@ -5,6 +5,33 @@
   <div class="container main_wrapper">
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
+<!-- delete old news -->
+  <?php 
+  
+  if (isset($_GET['del'])) {
+    $news_id = $_GET['del'];
+    $img_query = "SELECT * FROM `aes_news` WHERE `aes_news`.`news_id` = $news_id ";
+    $img_run = mysqli_query($con,$img_query);
+    if ($img_run) {
+      $news_img = mysqli_fetch_assoc($img_run);
+      $news_img_del = $news_img['image'];
+      
+    }
+    $query = "DELETE FROM `aes_news` WHERE `aes_news`.`news_id` = $news_id";
+    $run = mysqli_query($con,$query) or die("can not deleted the data".mysqli_error($con));
+    if ($run) {
+      unlink("../img/".$news_img_del);
+      header("Location: post_news.php");
+    }
+    else{
+      echo "You have not deleted the data";
+    }
+
+  }
+
+
+ ?>
+  <!-- end of delete news -->
 
 
 
@@ -134,6 +161,9 @@
                                 <?php echo substr($news['news_descp'], 0,300). '....'?>                                             
                             </p>
                             <span class="published_date"><i class="fa fa-clock-o">&nbsp;&nbsp;<?php echo $news['post_date']; ?></i></span>
+                            <a href="<?php $_SERVER['PHP_SELF'] ?>?del= <?php echo $news['news_id'] ?>">
+                              <i class="fa fa-close" style="float: right; color: #A20A0A;">Del</i>
+                            </a>
                             <hr>
                          <?php   
                           }

@@ -126,7 +126,7 @@ if (isset($_POST['btn_delete'])) {
 			$query = "DELETE FROM `aes_message` WHERE `aes_message`.`message_id` = $message_uni_id";
 		    $run = mysqli_query($con, $query) or die("You are unable to insert the data.".mysqli_error($con));
 	 	if ($run) {
-	 		// echo "You have deleted successfully";
+	 		
 	 		unlink("../img/".$image);
 	 		header("Location: home.php");
 	 		

@@ -5,7 +5,33 @@
   <div class="container main_wrapper">
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
+  <!-- delete old message -->
+  <?php 
+  
+  if (isset($_GET['del'])) {
+    $msg_id = $_GET['del'];
+    $img_query = "SELECT * FROM `aes_message` WHERE `aes_message`.`message_id` = $msg_id ";
+    $img_run = mysqli_query($con,$img_query);
+    if ($img_run) {
+      $msg_img = mysqli_fetch_assoc($img_run);
+      $msg_img_del = $msg_img['image'];
 
+    }
+    $query = "DELETE FROM `aes_message` WHERE `aes_message`.`message_id` = $msg_id";
+    $run = mysqli_query($con,$query) or die("can not deleted the data".mysqli_error($con));
+    if ($run) {
+      unlink("../img/".$msg_img_del);
+      header("Location: home.php");
+    }
+    else{
+      echo "You have not deleted the data";
+    }
+
+  }
+
+
+ ?>
+  <!-- end of delete message -->
 
 
     <!-- for list group -->
@@ -107,7 +133,7 @@
                 </form>
               </div>
               <!-- end of new message section -->
-
+            
               <!-- for old message section -->
               <div class="col-md-5 od_msg">
                 <label for="old message"><h4>Old Message :</h4></label>
@@ -127,7 +153,11 @@
                                 <?php echo substr($message['message_descp'], 0,300). '....'?>                                             
                             </p>
                             <span class="published_date"><i class="fa fa-clock-o">&nbsp;&nbsp;<?php echo $message['upload_time']; ?></i></span>
+                            <a href="<?php $_SERVER['PHP_SELF'] ?>?del= <?php echo $message['message_id'] ?>">
+                              <i class="fa fa-close" style="float: right; color: #A20A0A;">Del</i>
+                            </a>
                             <hr>
+
                          <?php   
                           }
                           

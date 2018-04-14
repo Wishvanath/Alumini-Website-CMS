@@ -6,6 +6,34 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
+<!-- delete old event -->
+  <?php 
+  
+  if (isset($_GET['del'])) {
+    $event_id = $_GET['del'];
+    $img_query = "SELECT * FROM `aes_events` WHERE `aes_events`.`event_id` = $event_id ";
+    $img_run = mysqli_query($con,$img_query);
+    if ($img_run) {
+      $event_img = mysqli_fetch_assoc($img_run);
+      $event_img_del = $event_img['image'];
+
+      
+    }
+  $query = "DELETE FROM `aes_events` WHERE `aes_events`.`event_id` = $event_id";
+  $run = mysqli_query($con,$query) or die("can not deleted the data".mysqli_error($con));
+  if ($run) {
+    unlink("../img/". $event_img_del);
+    header("Location: post_events.php");
+  }
+  else{
+    echo "You have not deleted the data";
+  }
+
+  }
+
+
+ ?>
+  <!-- end of delete event-->
 
 
     <!-- for list group -->
@@ -139,6 +167,9 @@
                                  <?php echo substr($event['event_descp'], 0,300). '....'; ?>                                                  
                             </p>
                             <span class="published_date"><i class="fa fa-clock-o">&nbsp;&nbsp;<?php echo $event['post_date']; ?></i></span>
+                            <a href="<?php $_SERVER['PHP_SELF'] ?>?del= <?php echo $event['event_id'] ?>">
+                              <i class="fa fa-close" style="float: right; color: #A20A0A;">Del</i>
+                            </a>
                             <hr>
                          <?php   
                           }
