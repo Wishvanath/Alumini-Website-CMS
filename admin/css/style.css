@@ -296,7 +296,17 @@ a.list-group-item, button.list-group-item {
 }
 
 /* end of admin dashboard login page*/
-
+.main_wrapper .mentee_list {
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: 900px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    color: #10A2C1;
+    border-radius: 5px;
+}
 
 /*============================================================================*/
 

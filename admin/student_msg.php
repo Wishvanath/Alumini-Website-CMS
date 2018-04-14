@@ -31,10 +31,10 @@
                 <a href="alumni_list.php" class="list-group-item text-center alumni_det">
                   <h4 class="glyphicon glyphicon-education"></h4><br>Alumni Profile
                 </a>
-                <a href="mentor_list.php" class="list-group-item text-center mentor_det active">
+                <a href="mentor_list.php" class="list-group-item text-center mentor_det">
                   <h4 class="glyphicon glyphicon-eye-open"></h4><br>Mentor Profile
                 </a>
-                <a href="student_msg.php" class="list-group-item text-center mentee_det">
+                <a href="student_msg.php" class="list-group-item text-center mentee_det active">
                   <h4 class="glyphicon glyphicon-user"></h4><br>Message for Student
                 </a>
                 <a href="faculty.php" class="list-group-item text-center teacher_det">
@@ -59,106 +59,10 @@
           <div class="bhoechie-tab-content active">
             <div class="row">
               <div class="head_title">
-                <h3>Mentor Details :</h3>
+                <h3>Message for Student :</h3>
               </div>
               <!-- start of mentor details section -->
-              <div class="container-fluid mentor_list">
-                <table class="table table-striped table-responsive table-bordered">
-                  <thead>
-                      <th>M_Id</th>
-                      <th>Mentor Name</th>
-                      <th>Mentor Specialization</th>
-                      <th>Contact No</th>
-                      <th>Available Hours</th>
-                      <th>Available Days</th>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-                      <tr>
-                          <td>1</td>
-                          <td>Tapos Kumar</td>
-                          <td>Java Framework</td>
-                          <td>8067885858</td>
-                          <td>2-3 Hours</td>
-                          <td>Monday,Wednesday</td>
-                      </tr>
-
-                      
-                  </tbody>
-                           
-                </table>
-              </div>
+              <h1>this is student messagae page</h1>
               <!-- end of mentor details section -->
 
               

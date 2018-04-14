@@ -6,7 +6,28 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
+<?php 
 
+// delete the data from mentor table
+if (isset($_GET['del'])) {
+  $del_id = $_GET['del'];
+    $query_img = "SELECT * FROM `aes_mentor` WHERE `aes_mentor`.`mentor_id` = $del_id ";
+    $run_img = mysqli_query($con,$query_img);
+    if($run_img){
+      $mentor_img = mysqli_fetch_assoc($run_img);
+      $mn_image_del = $mentor_img['image'];
+      
+    }
+    $query = "DELETE FROM `aes_mentor` WHERE `aes_mentor`.`mentor_id` = $del_id";
+    $run = mysqli_query($con, $query)or die("cannot delete the data from database".mysqli_error($con));
+    if($run) {
+      unlink("../img/".$mn_image_del);
+      header("Location: mentor_list.php");
+    }
+}
+
+
+ ?>
 
     <!-- for list group -->
     <div class="row">
@@ -31,10 +52,10 @@
                 <a href="alumni_list.php" class="list-group-item text-center alumni_det">
                   <h4 class="glyphicon glyphicon-education"></h4><br>Alumni Profile
                 </a>
-                <a href="mentor_list.php" class="list-group-item text-center mentor_det">
+                <a href="mentor_list.php" class="list-group-item text-center mentor_det active">
                   <h4 class="glyphicon glyphicon-eye-open"></h4><br>Mentor Profile
                 </a>
-                <a href="student_msg.php" class="list-group-item text-center mentee_det active">
+                <a href="student_msg.php" class="list-group-item text-center mentee_det">
                   <h4 class="glyphicon glyphicon-user"></h4><br>Message for Student
                 </a>
                 <a href="faculty.php" class="list-group-item text-center teacher_det">
@@ -59,91 +80,54 @@
           <div class="bhoechie-tab-content active">
             <div class="row">
               <div class="head_title">
-                <h3>Mentee Details :</h3>
+                <h3>Mentor Details :</h3>
               </div>
               <!-- start of mentee details section -->
               <div class="container-fluid mentee_list">
                 <table class="table table-striped table-responsive table-bordered">
-                  <thead>
+                  <thead style="background-color:#18A5C3; color: white;">
                       <th>Mn_Id</th>
                       <th>Mentee Name</th>
                       <th>Email Id</th>
                       <th>Contact No</th>
-                      <th>Selected Course</th>
+                      <th>Mentor Sp</th>
+                      <th>Available Hours</th>
+                      <th>Available Days</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
 
                   </thead>
+                  <!-- fetch the data from database -->
+                  <?php 
+                    $query = "SELECT * FROM `aes_mentor` ";
+                    $run = mysqli_query($con, $query);
+                    if ($run) {
+                      while ($mentor = mysqli_fetch_assoc($run)) { ?>
+                       
                   <tbody>
                       <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr><tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Shiva</td>
-                        <td>shivakanan@gmail.com</td>
-                        <td>8904562334</td>
-                        <td>Andriod</td>
+                        <td><?php echo $mentor['mentor_id'] ?></td>
+                        <td><?php echo $mentor['mentor_name'] ?></td>
+                        <td><?php echo $mentor['email_id'] ?></td>
+                        <td><?php echo $mentor['contact_no'] ?></td>
+                        <td><?php echo $mentor['mentor_sp'] ?></td>
+                        <td><?php echo $mentor['available_hours'] ?></td>
+                        <td><?php echo $mentor['available_days'] ?></td>
+                        <td><a href="mn_update.php?edit= <?php echo $mentor['mentor_id'] ?>"><i class="fa fa-edit fa-lg" style="color:#F8A427;"></i></a></td>
+                        <td><a href="<?php $_SERVER['PHP_SELF'] ?> ?del=<?php echo $mentor['mentor_id'] ?>"><i class="fa fa-close fa-lg" style="color: #E94444;"></i></a></td>
                       </tr>
                       
                   </tbody>
+                   <?php
+                        
+                      }
+
+                    }
+                    else{
+                      echo "data not found in the database";
+                    }
+                   ?>
+                  <!-- end of php tag  -->
                            
                 </table>
               </div>
