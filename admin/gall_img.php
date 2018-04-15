@@ -6,7 +6,33 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
+<?php 
+  // delete the gallary data
+  if (isset($_GET['del'])) {
+    $del_id = $_GET['del'];
+    $img_qr = "SELECT * FROM `aes_gallary` WHERE `aes_gallary`.`gal_id` = $del_id ";
+    $img_rn = mysqli_query($con, $img_qr) or die("can not fetch the data");
+    if ($img_rn) {
+      $old_img = mysqli_fetch_assoc($img_rn);
+      $old_img1 = $old_img['img1'];
+      $old_img2 = $old_img['img2'];
+      $old_img3 = $old_img['img3'];
+      $old_img4 = $old_img['img4'];
 
+    }
+    $del_query = "DELETE FROM `aes_gallary` WHERE `aes_gallary`.`gal_id` = $del_id";
+    $del_run = mysqli_query($con, $del_query) or die("Can not deleted the data from database".mysqli_error($con));
+    if ($del_run) {
+      unlink("../img/".$old_img1);
+      unlink("../img/".$old_img2);
+      unlink("../img/".$old_img3);
+      unlink("../img/".$old_img4);
+      header("Location: gall_img.php");
+    }
+  }
+
+
+ ?>
 
     <!-- for list group -->
     <div class="row">
@@ -61,14 +87,75 @@
               <div class="head_title">
                 <h3>Upload Image for Gallery :</h3>
               </div>
-              <!-- start of Adjunct professor details section -->
-              <h3 style="text-align: center;">Currently working on this page we will get back soon .....!</h3>
-              <h3 style="text-align: center;">Please visit other page</h3>
-              <br>
-              <br>
-              <br>
-              <h4 style="text-align: center;color: #9E0C0C;">Thanks !</h4>
-             <!-- end of admin profile section -->
+              <div class="col-md-6 col-sm-6 col-lg-6 gal_section">
+                <form action="action_img.php" name="gallary_form" id="gallary_form" method="post" enctype="multipart/form-data">
+                  
+                  <div class="form-group">
+                    <label for="gal title"><h4>Gallary Title : *</h4></label>
+                    <input type="text" name="gal_title" id="gal_title" class="form-control" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="image1"><h4>Select First Image : *</h4></label>
+                    <input type="file" name="img1" id="img1" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="image1"><h4>Select Second Image : *</h4></label>
+                    <input type="file" name="img2" id="img2" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="image1"><h4>Select Third Image : *</h4></label>
+                    <input type="file" name="img3" id="img3" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="image1"><h4>Select Fourth Image : *</h4></label>
+                    <input type="file" name="img4" id="img4" required="">
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" name="btn_save" id="btn_save" class="btn btn-primary" value="Save" style="width: 100px; margin-top: 20px;">
+                  </div>
+                </form>
+              
+              </div>
+              <div class="col-md-6 col-sm-6 col-lg-6 gal_descp">
+                <div class="old_gal_title">
+                  <h4>Old Gallary </h4>
+                </div>
+                  <table class="table table-bordered">
+                    <thead style="background-color:#18A5C3; color: white;">
+                      <tr>
+                        <th>Gallary ID</th>
+                        <th>Gallary Title</th>
+                        <th>Publish Date</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <?php 
+                      // fetch the gallary data from database
+                    $old_gal = "SELECT * FROM `aes_gallary` ORDER BY `aes_gallary`.`post_date` DESC ";
+                    $run = mysqli_query($con, $old_gal) or die("can not fetch the data".mysqli_error($con));
+                    if(mysqli_num_rows($run) > 0){
+                      while ($gal = mysqli_fetch_assoc($run)) { ?>
+
+                    <tbody>
+                      <tr>
+                        <td><?php echo $gal['gal_id'] ?></td>
+                        <td><?php echo $gal['gal_title'] ?></td>
+                        <td><?php echo $gal['post_date'] ?></td>
+                        <td><a href="<?php $_SERVER['PHP_SELF'] ?> ?del=<?php echo $gal['gal_id'] ?>"><i class="fa fa-close fa-lg" style="color: #E94444;"></i></a></td>
+                      </tr>
+                    </tbody>
+                     <?php
+                        
+                      }
+                    }
+                    else{
+                      echo "Data not found in the database";
+                    }
+
+                     ?>
+                  </table>
+                
+              </div>
         
             </div><!-- end of row -->
           </div>

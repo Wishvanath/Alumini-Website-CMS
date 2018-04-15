@@ -821,12 +821,31 @@ font-weight: bold;
   font-family: "Montserrat-Light";
 }
 
+/*for gallary */
+.img_gal .gal_img img{
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 2px #687575;
+  padding: 2px;
+}
+  
+.img_gal .gal_img img:hover{
+   transform: scale(1.05);
+    transition: all .4s ease-in-out;
+    opacity: 1;
 
+}
 
-
-
-
-
+.img_gal .page-header h3{
+  color: #0AA5CC;
+  text-transform: uppercase;
+  font-size: 20px;
+}
 
 
 

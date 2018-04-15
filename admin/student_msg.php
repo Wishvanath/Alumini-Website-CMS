@@ -6,7 +6,20 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
+<?php 
+// delete old student message
+if (isset($_GET['del'])) {
+  $msg_id = $_GET['del'];
+  $query = "DELETE FROM `aes_st_msg` WHERE `aes_st_msg`.`st_msg_id` = $msg_id";
+  $run = mysqli_query($con, $query) or die("Can not delete the data".mysqli_error($con));
+  if ($run) {
+    header("Location:student_msg.php");
+  }
+  
+}
 
+
+ ?>
 
     <!-- for list group -->
     <div class="row">
@@ -61,26 +74,62 @@
               <div class="head_title">
                 <h3>Message for Student :</h3>
               </div>
-              <!-- start of mentor details section -->
-              <h1>this is student messagae page</h1>
-              <!-- end of mentor details section -->
+              <!-- start of student message section -->
+              <div class="student_msg">
+                  <div class="col-sm-7 col-md-7 col-lg-7 new_msg">
+                    <div class="msg_head">
+                      <h4>NEW MESSAGE :</h4>
+                    </div>
+                    <div class="msg_body">
+                      <form action="action_stmsg.php" name="student_message" id="student_message" method="post">
+                        <div class="form-group">
+                          <textarea name="st_message" id="st_message" cols="30" rows="20" class="form-control" placeholder="Type New Message" required=""></textarea>
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" name="btn_save" id="btn_save" class="btn btn-primary" value="Save" style="width: 100px; margin-top: 20px;">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 col-md-5 col-lg-5 old_message">
+                    <div class="msg_head">
+                      <h4>OLD MESSAGE</h4>
+                    </div>
+                              
+                    <div class="old_msg">
+                      <?php 
+                      // fetch old student message data from the table
+                      $st_msg_query = "SELECT * FROM `aes_st_msg` ORDER BY `aes_st_msg`.`post_date` DESC ";
+                      $st_run = mysqli_query($con, $st_msg_query) or die("can not fetch the data".mysqli_error($con));
+                      if (mysqli_num_rows($st_run) > 0) {
+                        while ($st_msg = mysqli_fetch_assoc($st_run)) { ?>
+                          
+                      <p>
+                        <?php echo $st_msg['st_message'] ?>
+                      </p>
+                      <i class="fa fa-clock-o " style="color: #D79522;"><?php echo $st_msg['post_date'] ?></i>
+                      <a href="<?php $_SERVER['PHP_SELF'] ?>?del= <?php echo $st_msg['st_msg_id'] ?>">
+                        <i class="fa fa-close fa-lg" style="color: #BB0B0B; float: right;"></i>
+                      </a>
+                      <hr>
+
+                    <?php
+                        }
+                      }
+                      else{
+                        echo "Data not found";
+                      }
+                     ?>
+                    </div>
+
+                  </div>
+               </div>
+              <!-- end of student message section -->
+             
 
               
             </div>
-            <div class="row">
-               <div class="container">
-                <div class="col-md-3 col-sm-3 col-xs-3"></div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                         <ul class="pagination">
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                         </ul> 
-                     </div>
-               <div class="col-md-3 col-sm-3 col-xs-3 "></div>
-            </div>
+            
            </div>
            
           </div>

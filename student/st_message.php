@@ -19,13 +19,33 @@
                 <h2>Message :</h2>
               </div>
               <div class="col-md-8 col-md-offset-2">
+                                 
                 <div class="mes_part">
+                  <?php 
+                  // fetch the data from student message table
+                $query = "SELECT * FROM `aes_st_msg` ORDER BY `aes_st_msg`.`post_date` DESC ";
+                $run = mysqli_query($con, $query) or die("can not fetch the data".mysqli_error($con));
+                if (mysqli_num_rows($run) > 0) {
+                  while ($msg = mysqli_fetch_assoc($run)) { ?>
+
                   <p>
                     <i class="fa  fa-quote-left" id="left_arr" style="color: #EBA02B;"></i> 
-                    dummy messageThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free
+                    <?php echo $msg['st_message'] ?>
                     <i class="fa fa fa-quote-right" id="right_arr" style="color: #EBA02B;"></i>
                   </p>
+                  <p>Post Date <i class="fa fa-clock-o" style="color: #E4AD19;"></i> <?php echo $msg['post_date'] ?></p>
+                  <hr>
+                   <?php
+                  }
+                }
+                else{
+                  echo "Data not found in the database";
+                }
+
+
+                 ?>
                 </div>
+                
               </div>
             </div>
        

@@ -34,7 +34,7 @@ body{
 .main_wrapper .alumni_list{
     max-height: 600px;
     overflow-y: scroll;
-    overflow-x: scroll\;
+    overflow-x: scroll;
     height: 900px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -308,6 +308,45 @@ a.list-group-item, button.list-group-item {
     border-radius: 5px;
 }
 
+/*for student message*/
+.student_msg .old_msg{
+  max-height: 430px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 700px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 4px;
+  color: #10A2C1;
+  border-radius: 5px;
+  padding: 10px;
+  
+}
+.student_msg .msg_head h4{
+  color: #0C7998;
+  font-weight: bold;
+}
+.adjunct_pf_list{
+  max-height: 600px;
+overflow-y: scroll;
+overflow-x: scroll;
+height: 900px;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+padding: 4px;
+color: #10A2C1;
+border-radius: 5px;
+}
+.gal_section{
+  border-right: 1px solid #31ADC0;
+}
+.gal_section h4{
+  color: #31ADC0;
+}
+.gal_descp h4{
+   color: #31ADC0;
+}
+
 /*============================================================================*/
 
 /*for media query*/
@@ -392,6 +431,9 @@ a.list-group-item, button.list-group-item {
   }
   .main_wrapper .header_title h1{
     font-size: 25px;
+  }
+  .gal_descp .table{
+    font-size: 10px;
   }
 }
 

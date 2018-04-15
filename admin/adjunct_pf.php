@@ -6,7 +6,22 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
+<?php 
 
+// delete the information of adjunct professor
+if (isset($_GET['del'])) {
+ // write query for delete the data
+  $del_id = $_GET['del'];
+  $del_query = "DELETE FROM `aes_adjn_pf` WHERE `aes_adjn_pf`.`adjn_id` = $del_id";
+  $del_run = mysqli_query($con, $del_query) or die("can not delete the data".mysqli_error($con));
+  if ($del_run) {
+    header("Location:adjunct_pf.php");
+  }
+}
+
+
+
+ ?>
 
     <!-- for list group -->
     <div class="row">
@@ -64,106 +79,47 @@
               <!-- start of Adjunct professor details section -->
               <div class="container-fluid adjunct_pf_list">
                 <table class="table table-striped table-responsive table-bordered">
-                  <thead>
-                      <th>Ad_Pf_Id</th>
+                  <thead style="background-color:#18A5C3; color: white;">
+                      
                       <th>Professor Name</th>
                       <th>Contact No</th>
+                      <th>Email ID</th>
                       <th>Specilization</th>
                       <th>Teaching Subject</th>
                       <th>Available Hours</th>
                       <th>Available Days</th>
+                      <th>Delete</th>
                   </thead>
                   <tbody>
+                    <?php 
+                      // fetch the data from adjucnt professor table
+                    $adj_query = "SELECT * FROM `aes_adjn_pf` ORDER BY `aes_adjn_pf`.`adjn_id` ASC";
+                    $run = mysqli_query($con, $adj_query) or die("can not fetch the data from database");
+                    if(mysqli_num_rows($run) > 0){
+                      while ($adjn = mysqli_fetch_assoc($run)) { ?>
+
                       <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
+                        
+                        <td><?php echo $adjn['adjn_name'] ?></td>
+                        <td><?php echo $adjn['adjn_contact_no'] ?></td>
+                        <td><?php echo $adjn['adjn_email'] ?></td>
+                        <td><?php echo $adjn['adjn_sp'] ?></td>
+                        <td><?php echo $adjn['subject'] ?></td>
+                        <td><?php echo $adjn['avl_hours'] ?></td>
+                        <td><?php echo $adjn['avl_days'] ?></td>
+                         <td><a href="<?php $_SERVER['PHP_SELF'] ?> ?del=<?php echo $adjn['adjn_id'] ?>"><i class="fa fa-close fa-lg" style="color: #E94444;"></i></a></td>
                       </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>Dr. S. Ravi</td>
-                        <td>8906543245</td>
-                        <td>Wireless Networking</td>
-                        <td>Adhoc Network</td>
-                        <td>3-4 Hours</td>
-                        <td>Monday,Tuesday</td>
-                      </tr>
+                      <?php  
+                       
+                      }
+                    }
+                    else{
+                      echo "data not found ";
+                    }
+
+
+                     ?>
+ 
                       
                      
                   </tbody>

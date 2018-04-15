@@ -455,9 +455,7 @@ hr{
   -webkit-box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);;
    box-shadow: 0px 5px 10px rgba(4, 4, 5, 0.5);
    padding: 20px;
-   height: 500px;
    margin-top: -50px;
-   
    line-height: 25px;
    font-size: 15px;
    letter-spacing: 1.5px; 
@@ -465,7 +463,6 @@ hr{
 .al_mentor .mes_part p{
   margin-top: 20px;
 }
-
 
 /*============================================================================*/
 
@@ -535,7 +532,7 @@ hr{
   }
   .al_mentor .mes_part{
     margin-top: 0px;
-    height: 500px;
+    
   }
 }
 
