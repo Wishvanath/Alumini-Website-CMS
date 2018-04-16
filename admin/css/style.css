@@ -346,7 +346,27 @@ border-radius: 5px;
 .gal_descp h4{
    color: #31ADC0;
 }
+.admin_img img{
+  width: 25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.admin_img{
+  text-align: center;
 
+}
+.ad_details h5{
+  color: #0FAEDC;
+  font-size: 15px;
+}
+.ad_details{
+  border-right: 1px solid #ccc;
+}
 /*============================================================================*/
 
 /*for media query*/
@@ -433,6 +453,9 @@ border-radius: 5px;
     font-size: 25px;
   }
   .gal_descp .table{
+    font-size: 10px;
+  }
+  .author_det .table{
     font-size: 10px;
   }
 }

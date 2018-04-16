@@ -24,7 +24,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>SRK alumini protal</title>
+    <title>Alumni online association</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

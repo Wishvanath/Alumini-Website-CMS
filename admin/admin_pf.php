@@ -6,7 +6,19 @@
     <?php require_once('inc/admin_head.php'); ?>
     <hr>
 
-
+<?php 
+  // delete the author data
+if (isset($_GET['del'])) {
+ // write query for delete the author data
+  $del_id = $_GET['del'];
+  $del_query = "DELETE FROM `aes_admin` WHERE `aes_admin`.`admin_id` = $del_id";
+  $del_run = mysqli_query($con, $del_query) or die("can not deleted the data".mysqli_error($con));
+  if ($del_run) {
+    header("Location: admin_pf.php");
+  }
+}
+  
+ ?>
 
     <!-- for list group -->
     <div class="row">
@@ -63,57 +75,106 @@
               </div>
               <!-- start of Adjunct professor details section -->
               <div class="container-fluid admin_pf">
+
+
+                <?php 
+
+                  // fetch the data from the admin profle
+                  $admin_qr = "SELECT * FROM `aes_admin`";
+                  $admin_run = mysqli_query($con, $admin_qr) or die("can not fetch the data".mysqli_error($con));
+                  if (mysqli_num_rows($admin_run  ) > 0) {
+                    $admin = mysqli_fetch_assoc($admin_run);
+                    
+                  }
+
+                 ?>
+                
                 <div class="row">
-                  <div class="al_image">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                      <img src="img/admin.jpg" alt="Admin Image" class="img-circle">
-                      <br>
-                      <br>
-                      <form action="">
+                  <div class="col-md-6 col-sm-6 col-lg-6 ad_details">
+                    <div class="admin_img">
+                      <img src="img/<?php echo $admin['admin_image'] ?>" alt="Admin Image">
+                    </div>
+                   
+                    <form action="action_adpf.php" name="admin_profile" id="admin_profile" method="post" enctype="multipart/form-data">
+                      
+                      <div class="form-group">
+                        <label for="admin id"><h5>Admin ID:</h5></label>
+                        <input type="text" name="admin_id" id="admin_id" class="form-control" value="<?php echo $admin['admin_id'] ?>">
+                        <label for="admin name"><h5>Name : *</h5></label>
+                        <input type="text" name="admin_name" id="admin_name" required="" class="form-control" value="<?php echo $admin['admin_name'] ?>">
+                        <label for="email id"><h5>Email Id : *</h5></label>
+                        <input type="text" name="admin_email" required="" id="admin_email" class="form-control" value="<?php echo $admin['admin_email'] ?>">
+                        <label for="contact no"><h5>Contact No : *</h5></label>
+                        <input type="text" name="admin_contact" maxlength="10" required="" id="admin_contact" class="form-control" value="<?php echo $admin['admin_contact'] ?>">
+                        <label for="address"><h5>Address : *</h5></label>
+                        <input type="text" name="admin_address" required="" id="admin_address" class="form-control" value="<?php echo $admin['admin_address'] ?>">
+                        <label for="profile image"><h5>Selecet Profle Image : *</h5></label>
+                        <input type="file" name="admin_image" id="admin_image" required="">
+                        
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="btn_update" id="btn_save" value="Update" class="btn btn-warning" style="width: 100px; margin-top: 20px;">
+                      </div>
+                   </form> 
+                          
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-lg-6 author_det">
+                    <div class="author_title">
+                      <h4>Create Author :</h4>
+                      <hr>
+                    </div>
+                    <div class="author_body">
+                      <form action="action_adpf.php" name="create_author" id="create_author" method="post">
                         <div class="form-group">
-                          <input type="file" class="ch_pic" value="Change">
+                          <input type="email" name="author_email" id="author_email" class="form-control" placeholder="Email id..">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" name="author_password" id="author_password" class="form-control" placeholder="Password..">
+                        </div>
+                        <div class="btn_panel">
+                          <input type="submit" name="author_create" id="author_create" class="btn btn-warning" value="Save" style="width: 100px">
                         </div>
                       </form>
                     </div>
-                    <div class="col-md-4">
-                      
+                    <br><br>
+                    <div class="author_title">
+                      <h4>Author List :</h4>
+                      <hr>
                     </div>
+                    <table class=" table table-bordered">
+                      <thead style="background-color:#18A5C3; color: white;">
+                        <tr>
+                          <th>ID</th>
+                          <th>Author Email</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php 
+                          // fetch the author details from table
+                          $author_qr ="SELECT * FROM `aes_admin` ";
+                          $author_run = mysqli_query($con, $author_qr);
+                          if (mysqli_num_rows($author_run) > 0) {
+                            while ($author = mysqli_fetch_assoc($author_run)) { ?>
+
+                        <tr>
+                          <td><?php echo $author['admin_id'] ?></td>
+                          <td><?php echo $author['admin_email'] ?></td>
+                          <td><a href="<?php $_SERVER['PHP_SELF'] ?> ?del=<?php echo $author['admin_id'] ?>"><i class="fa fa-close fa-lg" style="color: #E94444;"></i></a></td>
+                        </tr>
+                      </tbody>
+                       <?php
+                             
+                            }
+                          }
+                          else{
+                            echo "NO Author Found in the Database";
+                          }
+
+                         ?>
+                    </table>
+
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-2"></div>
-                  <div class="col-md-8 ad_details">
-                    <form action="">
-                      <div class="form-group">
-                        <label for="admin id"><h4>Admin ID :</h4></label>
-                        <input type="text" name="admin_id" class="form-control">
-                        <label for="admin name"><h4>Name :</h4></label>
-                        <input type="text" name="admin_name" class="form-control">
-                        <label for="email id"><h4>Email Id :</h4></label>
-                        <input type="text" name="emial_id" class="form-control">
-                        <label for="contact no"><h4>Contact No :</h4></label>
-                        <input type="text" name="contact_no" class="form-control">
-                        <label for="address"><h4>Address :</h4></label>
-                        <input type="text" name="address" class="form-control">
-                        <label for="password"><h4>Password :</h4></label>
-                        <input type="text" name="password" class="form-control">
-                        
-                      </div>
-                   </form> 
-                   <div class="row btn_list">
-                     <div class="col-sm-4 col-xs-4">
-                       <a href="#" class="btn btn-primary btn-group-justified">Save</a>
-                     </div>
-                     <div class="col-sm-4 col-xs-4">
-                       <a href="#" class="btn btn-warning btn-group-justified">Update</a>
-                     </div>
-                     <div class="col-sm-4 col-xs-4">
-                       <a href="#" class="btn btn-danger btn-group-justified">Delete</a>
-                     </div>
-                   </div>          
-                  </div>
-                  <div class="col-md-2"></div>
                 </div>
               </div>
              <!-- end of admin profile section -->
